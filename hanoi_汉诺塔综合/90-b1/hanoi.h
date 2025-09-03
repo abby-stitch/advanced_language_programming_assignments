@@ -1,48 +1,48 @@
-/* µçĞÅ 1850917 ÁºÊ«Ñş */
+
 #pragma once
 
 /* ------------------------------------------------------------------------------------------------------
 
-     ±¾ÎÄ¼ş¹¦ÄÜ£º
-	1¡¢ÎªÁË±£Ö¤ hanoi_main.cpp/hanoi_menu.cpp/hanoi_multiple_solutions.cpp ÄÜÏà»¥·ÃÎÊº¯ÊıµÄº¯ÊıÉùÃ÷
-	2¡¢Ò»¸öÒÔÉÏµÄcppÖĞÓÃµ½µÄºê¶¨Òå£¨#define£©»òÈ«¾ÖÖ»¶Á£¨const£©±äÁ¿£¬¸öÊı²»ÏŞ
-	3¡¢¿ÉÒÔ²Î¿¼ cmd_console_tools.h µÄĞ´·¨£¨ÈÏÕæÔÄ¶Á²¢Ìå»á£©
+     æœ¬æ–‡ä»¶åŠŸèƒ½ï¼š
+	1ã€ä¸ºäº†ä¿è¯ hanoi_main.cpp/hanoi_menu.cpp/hanoi_multiple_solutions.cpp èƒ½ç›¸äº’è®¿é—®å‡½æ•°çš„å‡½æ•°å£°æ˜
+	2ã€ä¸€ä¸ªä»¥ä¸Šçš„cppä¸­ç”¨åˆ°çš„å®å®šä¹‰ï¼ˆ#defineï¼‰æˆ–å…¨å±€åªè¯»ï¼ˆconstï¼‰å˜é‡ï¼Œä¸ªæ•°ä¸é™
+	3ã€å¯ä»¥å‚è€ƒ cmd_console_tools.h çš„å†™æ³•ï¼ˆè®¤çœŸé˜…è¯»å¹¶ä½“ä¼šï¼‰
    ------------------------------------------------------------------------------------------------------ */
-   /*Ô²ÅÌÏÔÊ¾ĞÅÏ¢*/
-#define BOTTOM_X       1   //Ô²ÅÌµ×²¿ºá×ø±ê
-#define BOTTOM_Y       15  //Ô²ÅÌµ×²¿×İ×ø±ê
-#define BOTTOM_LENGTH  23  //Ô²ÅÌµ×²¿³¤¶È
-#define BOTTOM_GAP     9   //Ô²ÅÌµ×²¿¼ä¸ô
+   /*åœ†ç›˜æ˜¾ç¤ºä¿¡æ¯*/
+#define BOTTOM_X       1   //åœ†ç›˜åº•éƒ¨æ¨ªåæ ‡
+#define BOTTOM_Y       15  //åœ†ç›˜åº•éƒ¨çºµåæ ‡
+#define BOTTOM_LENGTH  23  //åœ†ç›˜åº•éƒ¨é•¿åº¦
+#define BOTTOM_GAP     9   //åœ†ç›˜åº•éƒ¨é—´éš”
 
-/*Ô²ÖùĞÅÏ¢*/
-#define COLUMN_X       12  //Ô²Öùºá×ø±ê
-#define COLUMN_TOP_Y   3   //Ô²Öù¶¥²¿×İ×ø±ê
-#define COLUMN_LENGTH  12  //Ô²Öù³¤¶È
-#define COLUMN_GAP     32  //Ô²Öù¼ä¸ô
+/*åœ†æŸ±ä¿¡æ¯*/
+#define COLUMN_X       12  //åœ†æŸ±æ¨ªåæ ‡
+#define COLUMN_TOP_Y   3   //åœ†æŸ±é¡¶éƒ¨çºµåæ ‡
+#define COLUMN_LENGTH  12  //åœ†æŸ±é•¿åº¦
+#define COLUMN_GAP     32  //åœ†æŸ±é—´éš”
 
-/*ÒÆ¶¯ĞÅÏ¢*/
-#define MOVE_TOP       1   //Ô²ÅÌÒÆ¶¯×î¸ß×İ×ø±ê
+/*ç§»åŠ¨ä¿¡æ¯*/
+#define MOVE_TOP       1   //åœ†ç›˜ç§»åŠ¨æœ€é«˜çºµåæ ‡
 
-/*×İÏòÏÔÊ¾ĞÅÏ¢*/
-#define VERTICAL_Y     27  //×İÏòÏÔÊ¾=====×İ×ø±ê
-#define VERTICAL_X     9   //×İÏòÏÔÊ¾=====×î×ó±ßºá×ø±ê
+/*çºµå‘æ˜¾ç¤ºä¿¡æ¯*/
+#define VERTICAL_Y     27  //çºµå‘æ˜¾ç¤º=====çºµåæ ‡
+#define VERTICAL_X     9   //çºµå‘æ˜¾ç¤º=====æœ€å·¦è¾¹æ¨ªåæ ‡
 
-/*ºáÏòÏÔÊ¾ĞÅÏ¢*/
-#define HORIZONTAL_Y   32  //8.ºáÏòÏÔÊ¾×İ×ø±ê
-//#define HORIZONTAL_X   9  //8.ºáÏòÏÔÊ¾ºá×ø±ê
+/*æ¨ªå‘æ˜¾ç¤ºä¿¡æ¯*/
+#define HORIZONTAL_Y   32  //8.æ¨ªå‘æ˜¾ç¤ºçºµåæ ‡
+//#define HORIZONTAL_X   9  //8.æ¨ªå‘æ˜¾ç¤ºæ¨ªåæ ‡
 
-#define END_Y          38  //ÏÔÊ¾¼ÌĞøµÄ×İ×ø±ê
+#define END_Y          38  //æ˜¾ç¤ºç»§ç»­çš„çºµåæ ‡
 #define TIME           100 
 
 
 
 
-/*²Ëµ¥µÄÏÔÊ¾ÓëÑ¡Ôñ*/
+/*èœå•çš„æ˜¾ç¤ºä¸é€‰æ‹©*/
 char printAndselctMenu();
 
 
 
-/*¹¦ÄÜº¯Êı*/
+/*åŠŸèƒ½å‡½æ•°*/
 void push(char col, int n, int length);
 int pop(char col, int length);
 void initStartColumn(char startColumn, int n);
@@ -54,26 +54,27 @@ void drawPlate();
 void move(char src, char dst);
 void game(int layer, char startColumn, char targetColumn);
 
-/*ÖØÖÃ*/
+/*é‡ç½®*/
 void resetSTEP();
 void resetColumn();
 
 
 
-/*»ù±¾ĞÅÏ¢ÊäÈë*/
+/*åŸºæœ¬ä¿¡æ¯è¾“å…¥*/
 int inputBaseInfo(char mode, int* n, char* src, char* tmp, char* dst);
 
 
 
 /* =============================================================================================
-    hanioµİ¹éº¯Êı£¨Ñ¡Ïî1-4£©
+    hanioé€’å½’å‡½æ•°ï¼ˆé€‰é¡¹1-4ï¼‰
 
-    1.»ù±¾½â: hanoi(int n, char src, char tmp, char dst, char mode);
-    2.»ù±¾½â£¨²½Êı¼ÇÂ¼£©: hanoi(int n, char src, char tmp, char dst, char mode);
-    3.ÄÚ²¿Êı×éÏÔÊ¾£¨ºáÏò£©: hanoi(int n, char src, char tmp, char dst,char mode,int layer);
-    4.ÄÚ²¿Êı×éÏÔÊ¾£¨×İÏò+ºáÏò£©: hanoi(int n, char src, char tmp, char dst, char mode,int layer,int speed)
+    1.åŸºæœ¬è§£: hanoi(int n, char src, char tmp, char dst, char mode);
+    2.åŸºæœ¬è§£ï¼ˆæ­¥æ•°è®°å½•ï¼‰: hanoi(int n, char src, char tmp, char dst, char mode);
+    3.å†…éƒ¨æ•°ç»„æ˜¾ç¤ºï¼ˆæ¨ªå‘ï¼‰: hanoi(int n, char src, char tmp, char dst,char mode,int layer);
+    4.å†…éƒ¨æ•°ç»„æ˜¾ç¤ºï¼ˆçºµå‘+æ¨ªå‘ï¼‰: hanoi(int n, char src, char tmp, char dst, char mode,int layer,int speed)
 
-    6.Í¼ĞÎ½â-Ô¤±¸-ÔÚÆğÊ¼ÖùÉÏ»­n¸öÅÌ×Ó:hanoi(int n, char src, char tmp, char dst, char mode);
-    7.Í¼ĞÎ½â-Ô¤±¸-µÚÒ»´ÎÒÆ¶¯:hanoi(int n, char src, char tmp, char dst, char mode,int layer,int speed)
+    6.å›¾å½¢è§£-é¢„å¤‡-åœ¨èµ·å§‹æŸ±ä¸Šç”»nä¸ªç›˜å­:hanoi(int n, char src, char tmp, char dst, char mode);
+    7.å›¾å½¢è§£-é¢„å¤‡-ç¬¬ä¸€æ¬¡ç§»åŠ¨:hanoi(int n, char src, char tmp, char dst, char mode,int layer,int speed)
 ================================================================================================ */
+
 void hanoi(int n, char src, char tmp, char dst, char mode, int layer = 0, int speed = 0);
