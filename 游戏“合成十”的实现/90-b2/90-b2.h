@@ -1,7 +1,7 @@
-/* 1850917 电信 梁诗瑶 */
+
 #pragma once
 
-/*源程序文件的公用声明部分及其它所需内容*/
+/*婧愮▼搴忔枃浠剁殑鍏敤澹版槑閮ㄥ垎鍙婂叾瀹冩墍闇�鍐呭*/
 #define M 8
 #define N 10
 #define START_MAX 3
@@ -35,3 +35,4 @@ void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matri
 void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos, const int row, const int col, int matrix[][N], int pos[][N], int mode = 0);
 void show_arr(int x_pos, int y_pos, const int row, const int col, int matrix[][N], int pos[][N], int mode = 0);
 void fall_down(const int x_pos, const int y_pos, const int row, const int col, const int row_pos, const int col_pos, int matrix[][N], int pos[][N]);
+
