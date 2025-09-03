@@ -1,4 +1,4 @@
-/* 1850917 µçĞÅ ÁºÊ«Ñş */
+
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
@@ -6,506 +6,507 @@ using namespace std;
 
 int main()
 {
-	cout << "ÇëÊäÈë[0-100ÒÚ)Ö®¼äµÄÊı×Ö£º" << endl;
-	/*·Ö½âÎ»Êı*/
+	cout << "è¯·è¾“å…¥[0-100äº¿)ä¹‹é—´çš„æ•°å­—ï¼š" << endl;
+	/*åˆ†è§£ä½æ•°*/
 	double num, num1, num2;
 	cin >> num;
 	num1 = num * 0.1;
 	num2 = num1 - (int)num1;
 	int decimal = int((num2 + 0.000001) * 1000);
 
-	int bit_2 = decimal % 10;//·Ö
+	int bit_2 = decimal % 10;//åˆ†
 	decimal /= 10;
-	int bit_1 = decimal % 10;//½Ç
+	int bit_1 = decimal % 10;//è§’
 	decimal /= 10;
-	int bit1 = decimal % 10;//Ô²
+	int bit1 = decimal % 10;//åœ†
 
-	int bit2 = (int)num1 % 10;//Ê®Î»
+	int bit2 = (int)num1 % 10;//åä½
 	num1 /= 10;
-	int bit3 = (int)num1 % 10;//°ÙÎ»
+	int bit3 = (int)num1 % 10;//ç™¾ä½
 	num1 /= 10;
-	int bit4 = (int)num1 % 10;//Ç§Î»
+	int bit4 = (int)num1 % 10;//åƒä½
 	num1 /= 10;
-	int bit5 = (int)num1 % 10;//ÍòÎ»
+	int bit5 = (int)num1 % 10;//ä¸‡ä½
 	num1 /= 10;
-	int bit6 = (int)num1 % 10;//Ê®ÍòÎ»
+	int bit6 = (int)num1 % 10;//åä¸‡ä½
 	num1 /= 10;
-	int bit7 = (int)num1 % 10;//°ÙÍòÎ»
+	int bit7 = (int)num1 % 10;//ç™¾ä¸‡ä½
 	num1 /= 10;
-	int bit8 = (int)num1 % 10;//Ç§ÍòÎ»
+	int bit8 = (int)num1 % 10;//åƒä¸‡ä½
 	num1 /= 10;
-	int bit9 = (int)num1 % 10;//ÒÚÎ»
+	int bit9 = (int)num1 % 10;//äº¿ä½
 	num1 /= 10;
-	int bit10 = (int)num1 % 10;//Ê®ÒÚÎ»
+	int bit10 = (int)num1 % 10;//åäº¿ä½
 	num1 /= 10;
 
-	/*Êä³öÅĞ¶Ï*/
-	bool level1 = bit10 != 0 || bit9 != 0;//Ê®ÒÚ~ÒÚÊÇ·ñ·ÇÁã
-	bool level2 = bit8 != 0 || bit7 != 0 || bit6 != 0 || bit5 != 0;//Ç§Íò~ÍòÊÇ·ñ·ÇÁã
-	bool level3 = bit4 != 0 || bit3 != 0 || bit2 != 0 || bit1 != 0;//Ç§~ÔªÊÇ·ñ·ÇÁã
-	bool level4 = bit_1 != 0 || bit_2 != 0;//½Ç~·ÖÊÇ·ñ·ÇÁã
+	/*è¾“å‡ºåˆ¤æ–­*/
+	bool level1 = bit10 != 0 || bit9 != 0;//åäº¿~äº¿æ˜¯å¦éé›¶
+	bool level2 = bit8 != 0 || bit7 != 0 || bit6 != 0 || bit5 != 0;//åƒä¸‡~ä¸‡æ˜¯å¦éé›¶
+	bool level3 = bit4 != 0 || bit3 != 0 || bit2 != 0 || bit1 != 0;//åƒ~å…ƒæ˜¯å¦éé›¶
+	bool level4 = bit_1 != 0 || bit_2 != 0;//è§’~åˆ†æ˜¯å¦éé›¶
 
-	cout << "´óĞ´½á¹ûÊÇ£º" << endl;
+	cout << "å¤§å†™ç»“æœæ˜¯ï¼š" << endl;
 
-	/*Ê®ÒÚ~ÒÚ·ÇÁãÊä³ö*/
+	/*åäº¿~äº¿éé›¶è¾“å‡º*/
 	if (level1)
 	{
-		/*Ê®ÒÚÎ»*/
+		/*åäº¿ä½*/
 		switch (bit10)
 		{
 			case 0:
 				break;
 			case 1:
-				cout << "Ò¼Ê°";
+				cout << "å£¹æ‹¾";
 				break;
 			case 2:
-				cout << "·¡Ê°";
+				cout << "è´°æ‹¾";
 				break;
 			case 3:
-				cout << "ÈşÊ°";
+				cout << "åæ‹¾";
 				break;
 			case 4:
-				cout << "ËÁÊ°";
+				cout << "è‚†æ‹¾";
 				break;
 			case 5:
-				cout << "ÎéÊ°";
+				cout << "ä¼æ‹¾";
 				break;
 			case 6:
-				cout << "Â½Ê°";
+				cout << "é™†æ‹¾";
 				break;
 			case 7:
-				cout << "ÆâÊ°";
+				cout << "æŸ’æ‹¾";
 				break;
 			case 8:
-				cout << "°ÆÊ°";
+				cout << "æŒæ‹¾";
 				break;
 			case 9:
-				cout << "¾ÁÊ°";
+				cout << "ç–æ‹¾";
 				break;
 		}
-		/*ÒÚÎ»*/
+		/*äº¿ä½*/
 		switch (bit9)
 		{
 			case 0:
 				break;
 			case 1:
-				cout << "Ò¼";
+				cout << "å£¹";
 				break;
 			case 2:
-				cout << "·¡";
+				cout << "è´°";
 				break;
 			case 3:
-				cout << "Èş";
+				cout << "å";
 				break;
 			case 4:
-				cout << "ËÁ";
+				cout << "è‚†";
 				break;
 			case 5:
-				cout << "Îé";
+				cout << "ä¼";
 				break;
 			case 6:
-				cout << "Â½";
+				cout << "é™†";
 				break;
 			case 7:
-				cout << "Æâ";
+				cout << "æŸ’";
 				break;
 			case 8:
-				cout << "°Æ";
+				cout << "æŒ";
 				break;
 			case 9:
-				cout << "¾Á";
+				cout << "ç–";
 				break;
 		}
-		cout << "ÒÚ";
+		cout << "äº¿";
 	}
 
-	/*Ç§Íò~Íò·ÇÁãÊä³ö*/
+	/*åƒä¸‡~ä¸‡éé›¶è¾“å‡º*/
 	if (level2)
 	{
-		/*Ç§ÍòÎ»*/
+		/*åƒä¸‡ä½*/
 		switch (bit8)
 		{
 			case 0:
-				if (level1)//ÈôÊ®ÒÚ~ÒÚÎ»·ÇÁã
+				if (level1)//è‹¥åäº¿~äº¿ä½éé›¶
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼Çª";
+				cout << "å£¹ä»Ÿ";
 				break;
 			case 2:
-				cout << "·¡Çª";
+				cout << "è´°ä»Ÿ";
 				break;
 			case 3:
-				cout << "ÈşÇª";
+				cout << "åä»Ÿ";
 				break;
 			case 4:
-				cout << "ËÁÇª";
+				cout << "è‚†ä»Ÿ";
 				break;
 			case 5:
-				cout << "ÎéÇª";
+				cout << "ä¼ä»Ÿ";
 				break;
 			case 6:
-				cout << "Â½Çª";
+				cout << "é™†ä»Ÿ";
 				break;
 			case 7:
-				cout << "ÆâÇª";
+				cout << "æŸ’ä»Ÿ";
 				break;
 			case 8:
-				cout << "°ÆÇª";
+				cout << "æŒä»Ÿ";
 				break;
 			case 9:
-				cout << "¾ÁÇª";
+				cout << "ç–ä»Ÿ";
 				break;
 		}
-		/*°ÙÍòÎ»*/
+		/*ç™¾ä¸‡ä½*/
 		switch (bit7)
 		{
 			case 0:
 				if (bit8 && (bit5 || bit6))
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼°Û";
+				cout << "å£¹ä½°";
 				break;
 			case 2:
-				cout << "·¡°Û";
+				cout << "è´°ä½°";
 				break;
 			case 3:
-				cout << "Èş°Û";
+				cout << "åä½°";
 				break;
 			case 4:
-				cout << "ËÁ°Û";
+				cout << "è‚†ä½°";
 				break;
 			case 5:
-				cout << "Îé°Û";
+				cout << "ä¼ä½°";
 				break;
 			case 6:
-				cout << "Â½°Û";
+				cout << "é™†ä½°";
 				break;
 			case 7:
-				cout << "Æâ°Û";
+				cout << "æŸ’ä½°";
 				break;
 			case 8:
-				cout << "°Æ°Û";
+				cout << "æŒä½°";
 				break;
 			case 9:
-				cout << "¾Á°Û";
+				cout << "ç–ä½°";
 				break;
 		}
-		/*Ê®ÍòÎ»*/
+		/*åä¸‡ä½*/
 		switch (bit6)
 		{
 			case 0:
 				if (bit7 && bit5)
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼Ê°";
+				cout << "å£¹æ‹¾";
 				break;
 			case 2:
-				cout << "·¡Ê°";
+				cout << "è´°æ‹¾";
 				break;
 			case 3:
-				cout << "ÈşÊ°";
+				cout << "åæ‹¾";
 				break;
 			case 4:
-				cout << "ËÁÊ°";
+				cout << "è‚†æ‹¾";
 				break;
 			case 5:
-				cout << "ÎéÊ°";
+				cout << "ä¼æ‹¾";
 				break;
 			case 6:
-				cout << "Â½Ê°";
+				cout << "é™†æ‹¾";
 				break;
 			case 7:
-				cout << "ÆâÊ°";
+				cout << "æŸ’æ‹¾";
 				break;
 			case 8:
-				cout << "°ÆÊ°";
+				cout << "æŒæ‹¾";
 				break;
 			case 9:
-				cout << "¾ÁÊ°";
+				cout << "ç–æ‹¾";
 				break;
 		}
-		/*ÍòÎ»*/
+		/*ä¸‡ä½*/
 		switch (bit5)
 		{
 			case 0:
 				break;
 			case 1:
-				cout << "Ò¼";
+				cout << "å£¹";
 				break;
 			case 2:
-				cout << "·¡";
+				cout << "è´°";
 				break;
 			case 3:
-				cout << "Èş";
+				cout << "å";
 				break;
 			case 4:
-				cout << "ËÁ";
+				cout << "è‚†";
 				break;
 			case 5:
-				cout << "Îé";
+				cout << "ä¼";
 				break;
 			case 6:
-				cout << "Â½";
+				cout << "é™†";
 				break;
 			case 7:
-				cout << "Æâ";
+				cout << "æŸ’";
 				break;
 			case 8:
-				cout << "°Æ";
+				cout << "æŒ";
 				break;
 			case 9:
-				cout << "¾Á";
+				cout << "ç–";
 				break;
 		}
-		cout << "Íò";
+		cout << "ä¸‡";
 	}
 
-	/*Ç§~Ôª·ÇÁãÊä³ö*/
+	/*åƒ~å…ƒéé›¶è¾“å‡º*/
 	if (level3)
 	{
-		/*Ç§Î»*/
+		/*åƒä½*/
 		switch (bit4)
 		{
 			case 0:
 				if (level1 || level2)
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼Çª";
+				cout << "å£¹ä»Ÿ";
 				break;
 			case 2:
-				cout << "·¡Çª";
+				cout << "è´°ä»Ÿ";
 				break;
 			case 3:
-				cout << "ÈşÇª";
+				cout << "åä»Ÿ";
 				break;
 			case 4:
-				cout << "ËÁÇª";
+				cout << "è‚†ä»Ÿ";
 				break;
 			case 5:
-				cout << "ÎéÇª";
+				cout << "ä¼ä»Ÿ";
 				break;
 			case 6:
-				cout << "Â½Çª";
+				cout << "é™†ä»Ÿ";
 				break;
 			case 7:
-				cout << "ÆâÇª";
+				cout << "æŸ’ä»Ÿ";
 				break;
 			case 8:
-				cout << "°ÆÇª";
+				cout << "æŒä»Ÿ";
 				break;
 			case 9:
-				cout << "¾ÁÇª";
+				cout << "ç–ä»Ÿ";
 				break;
 		}
-		/*°ÙÎ»*/
+		/*ç™¾ä½*/
 		switch (bit3)
 		{
 			case 0:
 				if (bit4 && (bit2 || bit1))
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼°Û";
+				cout << "å£¹ä½°";
 				break;
 			case 2:
-				cout << "·¡°Û";
+				cout << "è´°ä½°";
 				break;
 			case 3:
-				cout << "Èş°Û";
+				cout << "åä½°";
 				break;
 			case 4:
-				cout << "ËÁ°Û";
+				cout << "è‚†ä½°";
 				break;
 			case 5:
-				cout << "Îé°Û";
+				cout << "ä¼ä½°";
 				break;
 			case 6:
-				cout << "Â½°Û";
+				cout << "é™†ä½°";
 				break;
 			case 7:
-				cout << "Æâ°Û";
+				cout << "æŸ’ä½°";
 				break;
 			case 8:
-				cout << "°Æ°Û";
+				cout << "æŒä½°";
 				break;
 			case 9:
-				cout << "¾Á°Û";
+				cout << "ç–ä½°";
 				break;
 		}
-		/*Ê®Î»*/
+		/*åä½*/
 		switch (bit2)
 		{
 			case 0:
 				if (bit3 && bit1)
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼Ê°";
+				cout << "å£¹æ‹¾";
 				break;
 			case 2:
-				cout << "·¡Ê°";
+				cout << "è´°æ‹¾";
 				break;
 			case 3:
-				cout << "ÈşÊ°";
+				cout << "åæ‹¾";
 				break;
 			case 4:
-				cout << "ËÁÊ°";
+				cout << "è‚†æ‹¾";
 				break;
 			case 5:
-				cout << "ÎéÊ°";
+				cout << "ä¼æ‹¾";
 				break;
 			case 6:
-				cout << "Â½Ê°";
+				cout << "é™†æ‹¾";
 				break;
 			case 7:
-				cout << "ÆâÊ°";
+				cout << "æŸ’æ‹¾";
 				break;
 			case 8:
-				cout << "°ÆÊ°";
+				cout << "æŒæ‹¾";
 				break;
 			case 9:
-				cout << "¾ÁÊ°";
+				cout << "ç–æ‹¾";
 				break;
 		}
-		/*Ô²*/
+		/*åœ†*/
 		switch (bit1)
 		{
 			case 0:
 				break;
 			case 1:
-				cout << "Ò¼";
+				cout << "å£¹";
 				break;
 			case 2:
-				cout << "·¡";
+				cout << "è´°";
 				break;
 			case 3:
-				cout << "Èş";
+				cout << "å";
 				break;
 			case 4:
-				cout << "ËÁ";
+				cout << "è‚†";
 				break;
 			case 5:
-				cout << "Îé";
+				cout << "ä¼";
 				break;
 			case 6:
-				cout << "Â½";
+				cout << "é™†";
 				break;
 			case 7:
-				cout << "Æâ";
+				cout << "æŸ’";
 				break;
 			case 8:
-				cout << "°Æ";
+				cout << "æŒ";
 				break;
 			case 9:
-				cout << "¾Á";
+				cout << "ç–";
 				break;
 		}
 	}
-	else if (!(level1 || level2 || level3 || level4))//Ê®ÒÚ~ÔªÈ«Îª0ÇÒ½Ç~·ÖÒ²Îª0
+	else if (!(level1 || level2 || level3 || level4))//åäº¿~å…ƒå…¨ä¸º0ä¸”è§’~åˆ†ä¹Ÿä¸º0
 	{
-		cout << "ÁãÔ²Õû";
+		cout << "é›¶åœ†æ•´";
 	}
 	if (level1 || level2 || level3)
 	{
-		cout << "Ô²";
+		cout << "åœ†";
 	}
-	/*½Ç~·Ö·ÇÁãÊä³ö*/
+	/*è§’~åˆ†éé›¶è¾“å‡º*/
 	if (level4)
 	{
-		/*½Ç*/
+		/*è§’*/
 		switch (bit_1)
 		{
 			case 0:
 				if (level3 && bit_2)
 				{
-					cout << "Áã";
+					cout << "é›¶";
 				}
 				break;
 			case 1:
-				cout << "Ò¼½Ç";
+				cout << "å£¹è§’";
 				break;
 			case 2:
-				cout << "·¡½Ç";
+				cout << "è´°è§’";
 				break;
 			case 3:
-				cout << "Èş½Ç";
+				cout << "åè§’";
 				break;
 			case 4:
-				cout << "ËÁ½Ç";
+				cout << "è‚†è§’";
 				break;
 			case 5:
-				cout << "Îé½Ç";
+				cout << "ä¼è§’";
 				break;
 			case 6:
-				cout << "Â½½Ç";
+				cout << "é™†è§’";
 				break;
 			case 7:
-				cout << "Æâ½Ç";
+				cout << "æŸ’è§’";
 				break;
 			case 8:
-				cout << "°Æ½Ç";
+				cout << "æŒè§’";
 				break;
 			case 9:
-				cout << "¾Á½Ç";
+				cout << "ç–è§’";
 				break;
 		}
-		/*·Ö*/
+		/*åˆ†*/
 		switch (bit_2)
 		{
 			case 0:
-				cout << "Õû";
+				cout << "æ•´";
 				break;
 			case 1:
-				cout << "Ò¼·Ö";
+				cout << "å£¹åˆ†";
 				break;
 			case 2:
-				cout << "·¡·Ö";
+				cout << "è´°åˆ†";
 				break;
 			case 3:
-				cout << "Èş·Ö";
+				cout << "ååˆ†";
 				break;
 			case 4:
-				cout << "ËÁ·Ö";
+				cout << "è‚†åˆ†";
 				break;
 			case 5:
-				cout << "Îé·Ö";
+				cout << "ä¼åˆ†";
 				break;
 			case 6:
-				cout << "Â½·Ö";
+				cout << "é™†åˆ†";
 				break;
 			case 7:
-				cout << "Æâ·Ö";
+				cout << "æŸ’åˆ†";
 				break;
 			case 8:
-				cout << "°Æ·Ö";
+				cout << "æŒåˆ†";
 				break;
 			case 9:
-				cout << "¾Á·Ö";
+				cout << "ç–åˆ†";
 				break;
 		}
 	}
 	else if (level1 || level2 || level3)
 	{
-		cout << "Õû";
+		cout << "æ•´";
 	}
 
 	cout << endl;
 
 	return 0;
+
 }
