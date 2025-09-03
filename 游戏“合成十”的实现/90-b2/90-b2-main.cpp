@@ -1,5 +1,5 @@
-/* 1850917 µçĞÅ ÁºÊ«Ñş */
-/*Ö÷º¯Êı¼°²Ëµ¥²¿·Öº¯Êı*/
+
+/*ä¸»å‡½æ•°åŠèœå•éƒ¨åˆ†å‡½æ•°*/
 #include <iostream>
 #include <conio.h>
 #include <iomanip>
@@ -10,28 +10,28 @@
 using namespace std;
 
 /***************************************************************************
-	º¯ÊıÃû³Æ£º
-	¹¦    ÄÜ£º²Ëµ¥µÄÏÔÊ¾ÓëÑ¡Ôñ
-	ÊäÈë²ÎÊı£º
-	·µ »Ø Öµ£º
-	Ëµ    Ã÷£º
+	å‡½æ•°åç§°ï¼š
+	åŠŸ    èƒ½ï¼šèœå•çš„æ˜¾ç¤ºä¸é€‰æ‹©
+	è¾“å…¥å‚æ•°ï¼š
+	è¿” å› å€¼ï¼š
+	è¯´    æ˜ï¼š
   ***************************************************************************/
 char printAndselctMenu()
 {
 	char sel;
 	cout << "-----------------------------------" << endl;
-	cout << "1.ÃüÁîĞĞÕÒ³ö¿ÉºÏ³ÉÏî²¢±êÊ¶£¨·Çµİ¹é£©" << endl;
-	cout << "2.ÃüÁîĞĞÕÒ³ö¿ÉºÏ³ÉÏî²¢±êÊ¶£¨µİ¹é£©" << endl;
-	cout << "3.ÃüÁîĞĞÍê³ÉÒ»´ÎºÏ³É£¨·Ö²½ÖèÏÔÊ¾£©" << endl;
-	cout << "4.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÎŞ·Ö¸ôÏß£©" << endl;
-	cout << "5.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÎŞ·Ö¸ôÏß£©" << endl;
-	cout << "6.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÓĞ·Ö¸ôÏß£©" << endl;
-	cout << "7.Î±Í¼ĞÎ½çÃæÏÂÓÃ¼ıÍ·¼üÑ¡Ôñµ±Ç°É«¿é" << endl;
-	cout << "8.Î±Í¼ĞÎ½çÃæÍê³ÉÒ»´ÎºÏ³É£¨·Ö²½Öè£©" << endl;
-	cout << "9.Î±Í¼ĞÎ½çÃæÍêÕû°æ" << endl;
-	cout << "0.ÍË³ö" << endl;
+	cout << "1.å‘½ä»¤è¡Œæ‰¾å‡ºå¯åˆæˆé¡¹å¹¶æ ‡è¯†ï¼ˆéé€’å½’ï¼‰" << endl;
+	cout << "2.å‘½ä»¤è¡Œæ‰¾å‡ºå¯åˆæˆé¡¹å¹¶æ ‡è¯†ï¼ˆé€’å½’ï¼‰" << endl;
+	cout << "3.å‘½ä»¤è¡Œå®Œæˆä¸€æ¬¡åˆæˆï¼ˆåˆ†æ­¥éª¤æ˜¾ç¤ºï¼‰" << endl;
+	cout << "4.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæ— åˆ†éš”çº¿ï¼‰" << endl;
+	cout << "5.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæ— åˆ†éš”çº¿ï¼‰" << endl;
+	cout << "6.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæœ‰åˆ†éš”çº¿ï¼‰" << endl;
+	cout << "7.ä¼ªå›¾å½¢ç•Œé¢ä¸‹ç”¨ç®­å¤´é”®é€‰æ‹©å½“å‰è‰²å—" << endl;
+	cout << "8.ä¼ªå›¾å½¢ç•Œé¢å®Œæˆä¸€æ¬¡åˆæˆï¼ˆåˆ†æ­¥éª¤ï¼‰" << endl;
+	cout << "9.ä¼ªå›¾å½¢ç•Œé¢å®Œæ•´ç‰ˆ" << endl;
+	cout << "0.é€€å‡º" << endl;
 	cout << "-----------------------------------" << endl;
-	cout << "[ÇëÑ¡Ôñ0-9] ";
+	cout << "[è¯·é€‰æ‹©0-9] ";
 
 	while (1)
 	{
@@ -63,10 +63,10 @@ char printAndselctMenu()
 
 int main()
 {
-	/* demoÖĞÊ×ÏÈÖ´ĞĞ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ĞĞx120ÁĞ£¨»º³åÇø¿í¶È120ÁĞ£¬ĞĞÊı9000ĞĞ£¬¼´cmd´°¿ÚÓÒ²à´øÓĞ´¹Ö±¹ö¶¯¸Ë£©*/
+	/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰å‚ç›´æ»šåŠ¨æ†ï¼‰*/
 	cct_setconsoleborder(120, 40, 120, 9000);
 
-	/* Éú³ÉÎ±Ëæ»úÊıµÄÖÖ×Ó£¬Ö»ĞèÔÚ³ÌĞò¿ªÊ¼Ê±Ö´ĞĞÒ»´Î¼´¿É */
+	/* ç”Ÿæˆä¼ªéšæœºæ•°çš„ç§å­ï¼Œåªéœ€åœ¨ç¨‹åºå¼€å§‹æ—¶æ‰§è¡Œä¸€æ¬¡å³å¯ */
 	srand((unsigned int)(time(0)));
 	char mode;
 
@@ -74,168 +74,168 @@ int main()
 
 	while (1)
 	{
-		/* demoÖĞÊ×ÏÈÖ´ĞĞ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ĞĞx120ÁĞ£¨»º³åÇø¿í¶È120ÁĞ£¬ĞĞÊı9000ĞĞ£¬¼´cmd´°¿ÚÓÒ²à´øÓĞ´¹Ö±¹ö¶¯¸Ë£©*/
+		/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰å‚ç›´æ»šåŠ¨æ†ï¼‰*/
 		cct_setconsoleborder(120, 40, 120, 9000);
 
-		int max = START_MAX;//Êı×éÖĞµÄ×î´óÖµ
+		int max = START_MAX;//æ•°ç»„ä¸­çš„æœ€å¤§å€¼
 
-		int row = 0;//ĞĞÊı
-		int col = 0;//ÁĞÊı
+		int row = 0;//è¡Œæ•°
+		int col = 0;//åˆ—æ•°
 		
-		int goal = 0;//ºÏ³ÉÄ¿±êÖµ
-		int point = 0;//×Ü·ÖÊı
+		int goal = 0;//åˆæˆç›®æ ‡å€¼
+		int point = 0;//æ€»åˆ†æ•°
 
-		int matrix[M][N] = { 0 };//´æ·ÅËæ»úÖµµÄ¾ØÕó
-		int pos_1[M][N] = { 0 };//¼ÇÂ¼Í¬ÖµÎ»ÖÃ
-		//int pos_2[M][N] = { 0 };//¼ÇÂ¼Í¬ÖµÎ»ÖÃ
+		int matrix[M][N] = { 0 };//å­˜æ”¾éšæœºå€¼çš„çŸ©é˜µ
+		int pos_1[M][N] = { 0 };//è®°å½•åŒå€¼ä½ç½®
+		//int pos_2[M][N] = { 0 };//è®°å½•åŒå€¼ä½ç½®
 
 		int row_pos = 0;
 		int col_pos = 0;
 
-		/*²Ëµ¥µÄÏÔÊ¾ÓëÑ¡Ôñ*/
+		/*èœå•çš„æ˜¾ç¤ºä¸é€‰æ‹©*/
 		mode = printAndselctMenu();
 
-		/*ÈôÑ¡ÔñÍË³ö£¬Ö±½ÓÍË³ö*/
+		/*è‹¥é€‰æ‹©é€€å‡ºï¼Œç›´æ¥é€€å‡º*/
 		if (mode == '0')
 			break;
 
 		switch (mode)
 		{
-			case '1'://1.ÃüÁîĞĞÕÒ³ö¿ÉºÏ³ÉÏî²¢±êÊ¶£¨·Çµİ¹é£©
+			case '1'://1.å‘½ä»¤è¡Œæ‰¾å‡ºå¯åˆæˆé¡¹å¹¶æ ‡è¯†ï¼ˆéé€’å½’ï¼‰
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*ÏÔÊ¾µ±Ç°Êı×é*/
+				/*æ˜¾ç¤ºå½“å‰æ•°ç»„*/
 				cout << endl;
-				print_matrix(1, "µ±Ç°Êı×é£º", row, col, matrix);
+				print_matrix(1, "å½“å‰æ•°ç»„ï¼š", row, col, matrix);
 				cout << endl;
 				
 				if (is_array_adjacent_same(row, col, matrix))
 				{
-					/*ÊäÈë¾ØÕó×ø±ê*/
+					/*è¾“å…¥çŸ©é˜µåæ ‡*/
 					input_coordinate(row, col, row_pos, col_pos, matrix);
 
-					/*ÕÒÏàÁÚÏàÍ¬Öµ£¨·Çµİ¹é·½Ê½£©*/
+					/*æ‰¾ç›¸é‚»ç›¸åŒå€¼ï¼ˆéé€’å½’æ–¹å¼ï¼‰*/
 					seek_same_val_nonrecursive(row, col, row_pos, col_pos, matrix, pos_1);
 
-					/*ÏÔÊ¾²éÕÒ½á¹ûÊı×é*/
+					/*æ˜¾ç¤ºæŸ¥æ‰¾ç»“æœæ•°ç»„*/
 					cout << endl;
-					print_matrix(2, "²éÕÒ½á¹ûÊı×é£º", row, col, pos_1);
-					cout << endl;
-
-					/*ÏÔÊ¾µ±Ç°Êı×é£¨²»Í¬É«±êÊ¶£©*/
-					cout << endl;
-					print_matrix_color("µ±Ç°Êı×é", row, col, matrix, pos_1);
-					cout << endl;
-				}
-				else
-				{
-					cout << "ÓÎÏ·Ê§°Ü" << endl;//ËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÓÎÏ·Ê§°Ü
-				}
-				/*½áÊø£¬ÊäÈëEnd*/
-				input_End();
-				break;
-			}
-			case '2'://2.ÃüÁîĞĞÕÒ³ö¿ÉºÏ³ÉÏî²¢±êÊ¶£¨µİ¹é£©
-			{
-				/*ÇåÆÁ*/
-				cct_cls();
-
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
-
-				/*Éú³ÉËæ»úÖµÊı×é*/
-				generate_matrix(row, col, matrix);
-
-				/*ÏÔÊ¾µ±Ç°Êı×é*/
-				cout << endl;
-				print_matrix(1, "µ±Ç°Êı×é£º", row, col, matrix);
-				cout << endl;
-
-				if (is_array_adjacent_same(row, col, matrix))
-				{
-					/*ÊäÈë¾ØÕó×ø±ê*/
-					input_coordinate(row, col, row_pos, col_pos, matrix);
-
-					/*ÕÒÏàÁÚÏàÍ¬Öµ£¨µİ¹é·½Ê½£©*/
-					seek_same_val_recursive(row, col, row_pos, col_pos, matrix, pos_1);
-
-					/*ÏÔÊ¾²éÕÒ½á¹ûÊı×é*/
-					cout << endl;
-					print_matrix(2, "²éÕÒ½á¹ûÊı×é£º", row, col, pos_1);
+					print_matrix(2, "æŸ¥æ‰¾ç»“æœæ•°ç»„ï¼š", row, col, pos_1);
 					cout << endl;
 
-					/*ÏÔÊ¾µ±Ç°Êı×é£¨²»Í¬É«±êÊ¶£©*/
+					/*æ˜¾ç¤ºå½“å‰æ•°ç»„ï¼ˆä¸åŒè‰²æ ‡è¯†ï¼‰*/
 					cout << endl;
-					print_matrix_color("µ±Ç°Êı×é", row, col, matrix, pos_1);
+					print_matrix_color("å½“å‰æ•°ç»„", row, col, matrix, pos_1);
 					cout << endl;
 				}
 				else
 				{
-					cout << "ÓÎÏ·Ê§°Ü" << endl;//ËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÓÎÏ·Ê§°Ü
+					cout << "æ¸¸æˆå¤±è´¥" << endl;//æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œæ¸¸æˆå¤±è´¥
 				}
-
-				/*½áÊø£¬ÊäÈëEnd*/
+				/*ç»“æŸï¼Œè¾“å…¥End*/
 				input_End();
 				break;
 			}
-			case '3'://3.ÃüÁîĞĞÍê³ÉÒ»´ÎºÏ³É£¨·Ö²½ÖèÏÔÊ¾£©
+			case '2'://2.å‘½ä»¤è¡Œæ‰¾å‡ºå¯åˆæˆé¡¹å¹¶æ ‡è¯†ï¼ˆé€’å½’ï¼‰
+			{
+				/*æ¸…å±*/
+				cct_cls();
+
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
+
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
+				generate_matrix(row, col, matrix);
+
+				/*æ˜¾ç¤ºå½“å‰æ•°ç»„*/
+				cout << endl;
+				print_matrix(1, "å½“å‰æ•°ç»„ï¼š", row, col, matrix);
+				cout << endl;
+
+				if (is_array_adjacent_same(row, col, matrix))
+				{
+					/*è¾“å…¥çŸ©é˜µåæ ‡*/
+					input_coordinate(row, col, row_pos, col_pos, matrix);
+
+					/*æ‰¾ç›¸é‚»ç›¸åŒå€¼ï¼ˆé€’å½’æ–¹å¼ï¼‰*/
+					seek_same_val_recursive(row, col, row_pos, col_pos, matrix, pos_1);
+
+					/*æ˜¾ç¤ºæŸ¥æ‰¾ç»“æœæ•°ç»„*/
+					cout << endl;
+					print_matrix(2, "æŸ¥æ‰¾ç»“æœæ•°ç»„ï¼š", row, col, pos_1);
+					cout << endl;
+
+					/*æ˜¾ç¤ºå½“å‰æ•°ç»„ï¼ˆä¸åŒè‰²æ ‡è¯†ï¼‰*/
+					cout << endl;
+					print_matrix_color("å½“å‰æ•°ç»„", row, col, matrix, pos_1);
+					cout << endl;
+				}
+				else
+				{
+					cout << "æ¸¸æˆå¤±è´¥" << endl;//æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œæ¸¸æˆå¤±è´¥
+				}
+
+				/*ç»“æŸï¼Œè¾“å…¥End*/
+				input_End();
+				break;
+			}
+			case '3'://3.å‘½ä»¤è¡Œå®Œæˆä¸€æ¬¡åˆæˆï¼ˆåˆ†æ­¥éª¤æ˜¾ç¤ºï¼‰
 			{
 				cct_cls();
 
-				/*ÊäÈëĞĞÁĞÊı£¬Ä¿±êÖµ*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
-				input_int("ÇëÊäÈëºÏ³ÉÄ¿±ê(5-20)£º", 5, 21, goal);//ÊäÈëºÏ³ÉÄ¿±ê
+				/*è¾“å…¥è¡Œåˆ—æ•°ï¼Œç›®æ ‡å€¼*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
+				input_int("è¯·è¾“å…¥åˆæˆç›®æ ‡(5-20)ï¼š", 5, 21, goal);//è¾“å…¥åˆæˆç›®æ ‡
 
 				generate_matrix(row, col, matrix);
 
 
 				cout << endl;
-				print_matrix(1, "µ±Ç°Êı×é£º", row, col, matrix);
+				print_matrix(1, "å½“å‰æ•°ç»„ï¼š", row, col, matrix);
 				cout << endl;
 
 				if (is_array_adjacent_same(row, col, matrix))
 				{
-					/*ÊäÈë¾ØÕó×ø±ê*/
+					/*è¾“å…¥çŸ©é˜µåæ ‡*/
 					input_coordinate(row, col, row_pos, col_pos, matrix);
 
-					/*ÕÒÏàÁÚÏàÍ¬Öµ£¨µİ¹é·½Ê½£©*/
+					/*æ‰¾ç›¸é‚»ç›¸åŒå€¼ï¼ˆé€’å½’æ–¹å¼ï¼‰*/
 					seek_same_val_recursive(row, col, row_pos, col_pos, matrix, pos_1);
 
 					cout << endl;
-					print_matrix(2, "²éÕÒ½á¹ûÊı×é£º", row, col, pos_1);
+					print_matrix(2, "æŸ¥æ‰¾ç»“æœæ•°ç»„ï¼š", row, col, pos_1);
 					cout << endl;
 
 					cout << endl;
-					print_matrix_color("µ±Ç°Êı×é", row, col, matrix, pos_1);
+					print_matrix_color("å½“å‰æ•°ç»„", row, col, matrix, pos_1);
 					cout << endl;
 
-					/*Ñ¡ÔñÊÇ·ñºÏ²¢*/
+					/*é€‰æ‹©æ˜¯å¦åˆå¹¶*/
 					char sel = input_is_merge(row_pos, col_pos);
 
-					if (sel == 'Y')//Íê³É±¾´ÎºÏ²¢
+					if (sel == 'Y')//å®Œæˆæœ¬æ¬¡åˆå¹¶
 					{
-						/*ºÏ²¢ÏàÁÚµÄÏàÍ¬Öµ£¬²¢ÏÔÊ¾*/
+						/*åˆå¹¶ç›¸é‚»çš„ç›¸åŒå€¼ï¼Œå¹¶æ˜¾ç¤º*/
 						cout << endl;
 						merge(row, col, row_pos, col_pos, matrix, pos_1, point, goal, max);
 						cout << endl;
 
-						wait_for_enter("½øĞĞÊı×éÏÂÂä³ı0²Ù×÷");
+						wait_for_enter("è¿›è¡Œæ•°ç»„ä¸‹è½é™¤0æ“ä½œ");
 
 						drop_down(row, col, row_pos, col_pos, matrix, pos_1);
 						cout << endl;
 
-						wait_for_enter("½øĞĞĞÂÖµÌî³ä");
+						wait_for_enter("è¿›è¡Œæ–°å€¼å¡«å……");
 
 						fill_new_val(row, col, matrix, pos_1, max);
 						cout << endl;
@@ -256,21 +256,21 @@ int main()
 				}
 				else
 				{
-					cout << "ÓÎÏ·Ê§°Ü" << endl;//ËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÓÎÏ·Ê§°Ü
+					cout << "æ¸¸æˆå¤±è´¥" << endl;//æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œæ¸¸æˆå¤±è´¥
 				}
 				input_End();
 				break;
 			}
-			case '4'://4.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÎŞ·Ö¸ôÏß£©
+			case '4'://4.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæ— åˆ†éš”çº¿ï¼‰
 			{
 				cct_cls();
 
-				int is_continue = 1;//ÈôËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÔòÖÃ0
+				int is_continue = 1;//è‹¥æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œåˆ™ç½®0
 
-				/*ÊäÈëĞĞÁĞÊı£¬Ä¿±êÖµ*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
-				input_int("ÇëÊäÈëºÏ³ÉÄ¿±ê(5-20)£º", 5, 21, goal);//ÊäÈëºÏ³ÉÄ¿±ê
+				/*è¾“å…¥è¡Œåˆ—æ•°ï¼Œç›®æ ‡å€¼*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
+				input_int("è¯·è¾“å…¥åˆæˆç›®æ ‡(5-20)ï¼š", 5, 21, goal);//è¾“å…¥åˆæˆç›®æ ‡
 
 				generate_matrix(row, col, matrix);
 
@@ -281,48 +281,48 @@ int main()
 					else
 						is_continue = 0;
 
-					/*Ò»´ÎºÏ²¢*/
+					/*ä¸€æ¬¡åˆå¹¶*/
 					while (1)
 					{
-						/*ÖØÖÃ¼ÇÂ¼Î»ÖÃÊı×é*/
+						/*é‡ç½®è®°å½•ä½ç½®æ•°ç»„*/
 						reset(row, col, pos_1);
 
 						cout << endl;
-						print_matrix(1, "µ±Ç°Êı×é£º", row, col, matrix);
+						print_matrix(1, "å½“å‰æ•°ç»„ï¼š", row, col, matrix);
 						cout << endl;
 
 						if (is_continue)
 						{
-							/*ÊäÈë¾ØÕó×ø±ê*/
+							/*è¾“å…¥çŸ©é˜µåæ ‡*/
 							input_coordinate(row, col, row_pos, col_pos, matrix);
 
-							/*ÕÒÏàÁÚÏàÍ¬Öµ£¨µİ¹é·½Ê½£©*/
+							/*æ‰¾ç›¸é‚»ç›¸åŒå€¼ï¼ˆé€’å½’æ–¹å¼ï¼‰*/
 							seek_same_val_recursive(row, col, row_pos, col_pos, matrix, pos_1);
 
 							cout << endl;
-							print_matrix(2, "²éÕÒ½á¹ûÊı×é£º", row, col, pos_1);
+							print_matrix(2, "æŸ¥æ‰¾ç»“æœæ•°ç»„ï¼š", row, col, pos_1);
 							cout << endl;
 
 							cout << endl;
-							print_matrix_color("µ±Ç°Êı×é", row, col, matrix, pos_1);
+							print_matrix_color("å½“å‰æ•°ç»„", row, col, matrix, pos_1);
 							cout << endl;
 
-							/*Ñ¡ÔñÊÇ·ñºÏ²¢*/
+							/*é€‰æ‹©æ˜¯å¦åˆå¹¶*/
 							char sel = input_is_merge(row_pos, col_pos);
 
-							if (sel == 'Y')//Íê³É±¾´ÎºÏ²¢
+							if (sel == 'Y')//å®Œæˆæœ¬æ¬¡åˆå¹¶
 							{
-								/*ºÏ²¢ÏàÁÚµÄÏàÍ¬Öµ£¬²¢ÏÔÊ¾*/
+								/*åˆå¹¶ç›¸é‚»çš„ç›¸åŒå€¼ï¼Œå¹¶æ˜¾ç¤º*/
 								cout << endl;
 								merge(row, col, row_pos, col_pos, matrix, pos_1, point, goal, max);
 								cout << endl;
 
-								wait_for_enter("½øĞĞÊı×éÏÂÂä³ı0²Ù×÷");
+								wait_for_enter("è¿›è¡Œæ•°ç»„ä¸‹è½é™¤0æ“ä½œ");
 
 								drop_down(row, col, row_pos, col_pos, matrix, pos_1);
 								cout << endl;
 
-								wait_for_enter("½øĞĞĞÂÖµÌî³ä");
+								wait_for_enter("è¿›è¡Œæ–°å€¼å¡«å……");
 
 								fill_new_val(row, col, matrix, pos_1, max);
 								cout << endl;
@@ -343,118 +343,118 @@ int main()
 						}
 						else
 						{
-							cout << "ÓÎÏ·Ê§°Ü" << endl;//ËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÓÎÏ·Ê§°Ü
+							cout << "æ¸¸æˆå¤±è´¥" << endl;//æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œæ¸¸æˆå¤±è´¥
 							break;
 						}
 					}
 					if (is_continue == 0)
 						break;
 					
-					/*Íê³ÉÒ»´ÎºÏ²¢ºó*/
-					cout << "±¾´ÎºÏ³É½áÊø£¬";
-					wait_for_enter("ĞÂÒ»´ÎµÄºÏ³É");
+					/*å®Œæˆä¸€æ¬¡åˆå¹¶å*/
+					cout << "æœ¬æ¬¡åˆæˆç»“æŸï¼Œ";
+					wait_for_enter("æ–°ä¸€æ¬¡çš„åˆæˆ");
 
 					if (max >= goal)
 					{
 						goal = max + 1;
 						cct_setcolor(COLOR_HYELLOW, COLOR_HRED);
-						cout << "ÒÑ¾­ºÏ³Éµ½" << max ;
-						cct_setcolor(COLOR_BLACK, COLOR_WHITE);;//»Ö¸´È±Ê¡ÑÕÉ«
+						cout << "å·²ç»åˆæˆåˆ°" << max ;
+						cct_setcolor(COLOR_BLACK, COLOR_WHITE);;//æ¢å¤ç¼ºçœé¢œè‰²
 						cout << endl;
 
-						wait_for_enter("Ïò¸ü¸ßÄ¿±ê½ø·¢");
+						wait_for_enter("å‘æ›´é«˜ç›®æ ‡è¿›å‘");
 					}
 				}
 
 				input_End();
 				break;
 			}
-			case '5'://5.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÎŞ·Ö¸ôÏß£©
+			case '5'://5.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæ— åˆ†éš”çº¿ï¼‰
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*´òÓ¡Íâ¿ò*/
+				/*æ‰“å°å¤–æ¡†*/
 				show_outer_frame(0, 1, row, col, 1);
 
-				/*´òÓ¡ÄÚ²¿¸ñ×Ó*/
+				/*æ‰“å°å†…éƒ¨æ ¼å­*/
 				show_arr_cube(0, 1, row, col, matrix, 1);
 
 				input_End();
 				break;
 			}
-			case '6'://6.Î±Í¼ĞÎ½çÃæÏÔÊ¾³õÊ¼Êı×é£¨ÓĞ·Ö¸ôÏß£©
+			case '6'://6.ä¼ªå›¾å½¢ç•Œé¢æ˜¾ç¤ºåˆå§‹æ•°ç»„ï¼ˆæœ‰åˆ†éš”çº¿ï¼‰
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*´òÓ¡Íâ¿ò*/
+				/*æ‰“å°å¤–æ¡†*/
 				show_outer_frame(0, 1, row, col, 2);
 
-				/*´òÓ¡ÄÚ²¿¸ñ×Ó*/
+				/*æ‰“å°å†…éƒ¨æ ¼å­*/
 				show_arr_cube(0, 1, row, col, matrix, 2);
 
 				input_End();
 				break;
 			}
-			case '7'://7.Î±Í¼ĞÎ½çÃæÏÂÓÃ¼ıÍ·¼üÑ¡Ôñµ±Ç°É«¿é
+			case '7'://7.ä¼ªå›¾å½¢ç•Œé¢ä¸‹ç”¨ç®­å¤´é”®é€‰æ‹©å½“å‰è‰²å—
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*´òÓ¡Íâ¿ò*/
+				/*æ‰“å°å¤–æ¡†*/
 				show_outer_frame(0, 1, row, col, 3);
 
-				/*´òÓ¡ÄÚ²¿¸ñ×Ó*/
+				/*æ‰“å°å†…éƒ¨æ ¼å­*/
 				show_arr_cube(0, 1, row, col, matrix, 3);
 
-				/*ÓÃ¼ıÍ·¼üÒÆ¶¯£¬»Ø³µ¼üÑ¡Ôñ*/
+				/*ç”¨ç®­å¤´é”®ç§»åŠ¨ï¼Œå›è½¦é”®é€‰æ‹©*/
 				/*row_pos = 0;
 				col_pos = 0;*/
-				move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1);//´Ómatirx[0][0]¿ªÊ¼ÒÆ¶¯
+				move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1);//ä»matirx[0][0]å¼€å§‹ç§»åŠ¨
 
 				input_End();
 				break;			
 			}
-			case '8'://8.Î±Í¼ĞÎ½çÃæÍê³ÉÒ»´ÎºÏ³É£¨·Ö²½Öè£©"
+			case '8'://8.ä¼ªå›¾å½¢ç•Œé¢å®Œæˆä¸€æ¬¡åˆæˆï¼ˆåˆ†æ­¥éª¤ï¼‰"
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
-				int is_continue = 1;//ÈôËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÔòÖÃ0
+				int is_continue = 1;//è‹¥æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œåˆ™ç½®0
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
-				input_int("ÇëÊäÈëºÏ³ÉÄ¿±ê(5-20)£º", 5, 21, goal);//ÊäÈëºÏ³ÉÄ¿±ê
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
+				input_int("è¯·è¾“å…¥åˆæˆç›®æ ‡(5-20)ï¼š", 5, 21, goal);//è¾“å…¥åˆæˆç›®æ ‡
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*´òÓ¡Íâ¿ò*/
+				/*æ‰“å°å¤–æ¡†*/
 				show_outer_frame(0, 1, row, col, 3);
 
-				/*´òÓ¡ÄÚ²¿¸ñ×Ó*/
+				/*æ‰“å°å†…éƒ¨æ ¼å­*/
 				show_arr_cube(0, 1, row, col, matrix, 3);
 
 
@@ -463,19 +463,19 @@ int main()
 				else
 					is_continue = 0;
 
-				/*Ò»´ÎºÏ²¢*/
+				/*ä¸€æ¬¡åˆå¹¶*/
 
-				/*ÖØÖÃ¼ÇÂ¼Î»ÖÃÊı×é*/
+				/*é‡ç½®è®°å½•ä½ç½®æ•°ç»„*/
 				reset(row, col, pos_1);
 
-				/*»ñµÃÒªºÏ²¢Î»ÖÃ¾ØÕó×ø±ê*/
-				move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1, 1);//´Ómatirx[0][0]¿ªÊ¼ÒÆ¶¯
+				/*è·å¾—è¦åˆå¹¶ä½ç½®çŸ©é˜µåæ ‡*/
+				move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1, 1);//ä»matirx[0][0]å¼€å§‹ç§»åŠ¨
 
-				/*ºÏ²¢ÏàÁÚµÄÏàÍ¬Öµ*/
+				/*åˆå¹¶ç›¸é‚»çš„ç›¸åŒå€¼*/
 				merge(row, col, row_pos, col_pos, matrix, pos_1, point, goal, max, 1);
 				show_arr(0, 1, row, col, matrix, pos_1, 2);
 
-				/*ÉÁË¸*/
+				/*é—ªçƒ*/
 				for (int i = 0; i < 3; i++)
 				{
 					show_sel_cube(2 + col_pos * 8, 2 + row_pos * 4, matrix[row_pos][col_pos]);
@@ -485,54 +485,54 @@ int main()
 				}
 
 				cct_gotoxy(0, 1 + row * 4 + 1);
-				cout << "ºÏ³ÉÍê³É£¬»Ø³µ¼üÏÂÂä0";
+				cout << "åˆæˆå®Œæˆï¼Œå›è½¦é”®ä¸‹è½0";
 				while (_getch() != '\r')
 					;
 
-				/*½øĞĞÊı×éÏÂÂä³ı0²Ù×÷*/
-				drop_down(row, col, row_pos, col_pos, matrix, pos_1,1);//ºÏ²¢ºóÎ»ÖÃÖÃÁã
+				/*è¿›è¡Œæ•°ç»„ä¸‹è½é™¤0æ“ä½œ*/
+				drop_down(row, col, row_pos, col_pos, matrix, pos_1,1);//åˆå¹¶åä½ç½®ç½®é›¶
 				/*cct_gotoxy(0,60);
 				cout << row_pos << endl;
 				cout << col_pos << endl;*/
 
-				/*ÏÔÊ¾ÏÂÂä¹ı³Ì*/
+				/*æ˜¾ç¤ºä¸‹è½è¿‡ç¨‹*/
 				fall_down(0, 1, row, col, row_pos, col_pos, matrix, pos_1);
 
-				/*Êı×éÏÂÂä³ı0*/
-				drop_down(row, col, row_pos, col_pos, matrix, pos_1, 2);//ºÏ²¢ºóÎ»ÖÃÖÃÁã
+				/*æ•°ç»„ä¸‹è½é™¤0*/
+				drop_down(row, col, row_pos, col_pos, matrix, pos_1, 2);//åˆå¹¶åä½ç½®ç½®é›¶
 
-				/*²úÉúĞÂµÄËæ»úÖµ*/
+				/*äº§ç”Ÿæ–°çš„éšæœºå€¼*/
 				cct_gotoxy(0, 1 + row * 4 + 1);
-				cout << "ÏÂÂä0Íê³É£¬»Ø³µ¼üÌî³äĞÂÖµ";
+				cout << "ä¸‹è½0å®Œæˆï¼Œå›è½¦é”®å¡«å……æ–°å€¼";
 				while (_getch() != '\r')
 					;
 				fill_new_val(row, col, matrix, pos_1, max,1);
 
-				/*ÏÔÊ¾ĞÂµÄËæ»úÖµ*/
+				/*æ˜¾ç¤ºæ–°çš„éšæœºå€¼*/
 				show_arr(0, 1, row, col, matrix, pos_1, 3);
 
 				cct_gotoxy(0, 1 + row * 4 + 1);
 				input_End();
 				break;	
 			}
-			case '9'://9.Î±Í¼ĞÎ½çÃæÍêÕû°æ
+			case '9'://9.ä¼ªå›¾å½¢ç•Œé¢å®Œæ•´ç‰ˆ
 			{
-				/*ÇåÆÁ*/
+				/*æ¸…å±*/
 				cct_cls();
-				int is_continue = 1;//ÈôËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÔòÖÃ0
+				int is_continue = 1;//è‹¥æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œåˆ™ç½®0
 
-				/*ÊäÈëĞĞÁĞÊı*/
-				input_int("ÇëÊäÈëĞĞÊı(5-8)£º", 5, 9, row);//ÊäÈëĞĞÊı
-				input_int("ÇëÊäÈëÁĞÊı(5-10)£º", 5, 11, col);//ÊäÈëÁĞÊı
-				input_int("ÇëÊäÈëºÏ³ÉÄ¿±ê(5-20)£º", 5, 21, goal);//ÊäÈëºÏ³ÉÄ¿±ê
+				/*è¾“å…¥è¡Œåˆ—æ•°*/
+				input_int("è¯·è¾“å…¥è¡Œæ•°(5-8)ï¼š", 5, 9, row);//è¾“å…¥è¡Œæ•°
+				input_int("è¯·è¾“å…¥åˆ—æ•°(5-10)ï¼š", 5, 11, col);//è¾“å…¥åˆ—æ•°
+				input_int("è¯·è¾“å…¥åˆæˆç›®æ ‡(5-20)ï¼š", 5, 21, goal);//è¾“å…¥åˆæˆç›®æ ‡
 
-				/*Éú³ÉËæ»úÖµÊı×é*/
+				/*ç”Ÿæˆéšæœºå€¼æ•°ç»„*/
 				generate_matrix(row, col, matrix);
 
-				/*´òÓ¡Íâ¿ò*/
+				/*æ‰“å°å¤–æ¡†*/
 				show_outer_frame(0, 1, row, col, 3);
 
-				/*´òÓ¡ÄÚ²¿¸ñ×Ó*/
+				/*æ‰“å°å†…éƒ¨æ ¼å­*/
 				show_arr_cube(0, 1, row, col, matrix, 3);
 				while (1)
 				{
@@ -541,22 +541,22 @@ int main()
 					else
 						is_continue = 0;
 
-					/*Ò»´ÎºÏ²¢*/
+					/*ä¸€æ¬¡åˆå¹¶*/
 					while (1)
 					{
-						/*ÖØÖÃ¼ÇÂ¼Î»ÖÃÊı×é*/
+						/*é‡ç½®è®°å½•ä½ç½®æ•°ç»„*/
 						reset(row, col, pos_1);
 
 						if (is_continue)
 						{
-							/*»ñµÃÒªºÏ²¢Î»ÖÃ¾ØÕó×ø±ê*/
-							move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1, 1);//´Ómatirx[0][0]¿ªÊ¼ÒÆ¶¯
+							/*è·å¾—è¦åˆå¹¶ä½ç½®çŸ©é˜µåæ ‡*/
+							move_by_arrow(0, 1, row_pos, col_pos, row, col, matrix, pos_1, 1);//ä»matirx[0][0]å¼€å§‹ç§»åŠ¨
 
-							/*ºÏ²¢ÏàÁÚµÄÏàÍ¬Öµ*/
+							/*åˆå¹¶ç›¸é‚»çš„ç›¸åŒå€¼*/
 							merge(row, col, row_pos, col_pos, matrix, pos_1, point, goal, max, 1);
 							show_arr(0, 1, row, col, matrix, pos_1, 2);
 
-							/*ÉÁË¸*/
+							/*é—ªçƒ*/
 							for (int i = 0; i < 3; i++)
 							{
 								show_sel_cube(2 + col_pos * 8, 2 + row_pos * 4, matrix[row_pos][col_pos]);
@@ -570,47 +570,47 @@ int main()
 							/*while (_getch() != '\r')
 								;*/
 
-							/*½øĞĞÊı×éÏÂÂä³ı0²Ù×÷*/
-							drop_down(row, col, row_pos, col_pos, matrix, pos_1, 1);//ºÏ²¢ºóÎ»ÖÃÖÃÁã
+							/*è¿›è¡Œæ•°ç»„ä¸‹è½é™¤0æ“ä½œ*/
+							drop_down(row, col, row_pos, col_pos, matrix, pos_1, 1);//åˆå¹¶åä½ç½®ç½®é›¶
 							/*cct_gotoxy(0,60);
 							cout << row_pos << endl;
 							cout << col_pos << endl;*/
 
-							/*ÏÔÊ¾ÏÂÂä¹ı³Ì*/
+							/*æ˜¾ç¤ºä¸‹è½è¿‡ç¨‹*/
 							fall_down(0, 1, row, col, row_pos, col_pos, matrix, pos_1);
 
-							/*Êı×éÏÂÂä³ı0*/
-							drop_down(row, col, row_pos, col_pos, matrix, pos_1, 2);//ºÏ²¢ºóÎ»ÖÃÖÃÁã
+							/*æ•°ç»„ä¸‹è½é™¤0*/
+							drop_down(row, col, row_pos, col_pos, matrix, pos_1, 2);//åˆå¹¶åä½ç½®ç½®é›¶
 
-							/*²úÉúĞÂµÄËæ»úÖµ*/
+							/*äº§ç”Ÿæ–°çš„éšæœºå€¼*/
 							cct_gotoxy(0, 1 + row * 4 + 1);
-							/*cout << "ÏÂÂä0Íê³É£¬»Ø³µ¼üÌî³äĞÂÖµ";
+							/*cout << "ä¸‹è½0å®Œæˆï¼Œå›è½¦é”®å¡«å……æ–°å€¼";
 							while (_getch() != '\r')
 								;*/
 							fill_new_val(row, col, matrix, pos_1, max, 1);
 
-							/*ÏÔÊ¾ĞÂµÄËæ»úÖµ*/
+							/*æ˜¾ç¤ºæ–°çš„éšæœºå€¼*/
 							show_arr(0, 1, row, col, matrix, pos_1, 3);
 						}
 						else
 						{
-							cout << "ÓÎÏ·Ê§°Ü" << endl;//ËùÓĞÊı×ÖÎŞ·¨ºÏ²¢£¬ÓÎÏ·Ê§°Ü
+							cout << "æ¸¸æˆå¤±è´¥" << endl;//æ‰€æœ‰æ•°å­—æ— æ³•åˆå¹¶ï¼Œæ¸¸æˆå¤±è´¥
 							break;
 						}
 					}
 					if (is_continue == 0)
 						break;
 
-					/*Íê³ÉÒ»´ÎºÏ²¢ºó*/
+					/*å®Œæˆä¸€æ¬¡åˆå¹¶å*/
 					if (max >= goal)
 					{
 						goal = max + 1;
 						cct_setcolor(COLOR_BLACK, COLOR_HYELLOW);
-						cout << "ÒÑ¾­ºÏ³Éµ½" << max;
-						cct_setcolor(COLOR_BLACK, COLOR_WHITE);;//»Ö¸´È±Ê¡ÑÕÉ«
+						cout << "å·²ç»åˆæˆåˆ°" << max;
+						cct_setcolor(COLOR_BLACK, COLOR_WHITE);;//æ¢å¤ç¼ºçœé¢œè‰²
 						cout << endl;
 
-						wait_for_enter("Ïò¸ü¸ßÄ¿±ê½ø·¢");
+						wait_for_enter("å‘æ›´é«˜ç›®æ ‡è¿›å‘");
 					}
 
 				}
@@ -619,4 +619,5 @@ int main()
 		}
 	}
 	return 0;
+
 }
