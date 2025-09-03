@@ -1,4 +1,4 @@
-/* 1850917 ÁºÊ«Ñş µçĞÅ */
+
 #include <iostream>
 using namespace std;
 
@@ -17,12 +17,12 @@ int main()
 	int minNum = 0;
 	while (1)
 	{
-		cout << "ÇëÊäÈë¸öÊınum¼°num¸öÕıÕûÊı£º" << endl;
+		cout << "è¯·è¾“å…¥ä¸ªæ•°numåŠnumä¸ªæ­£æ•´æ•°ï¼š" << endl;
 		cin >> num;
 		if (cin.fail())
 		{
-			cin.clear();//Çå³ı´íÎó±êÖ¾
-			cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+			cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+			cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 			continue;
 		}
 		if (num >= 2 && num <= 4 && cin.good())
@@ -33,15 +33,15 @@ int main()
 				cin >> a;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> b;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				if (a <= 0 || b <= 0)
@@ -54,22 +54,22 @@ int main()
 				cin >> a;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> b;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> c;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				if (a <= 0 || b <= 0 || c <= 0)
@@ -82,29 +82,29 @@ int main()
 				cin >> a;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> b;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> c;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				cin >> d;
 				if (cin.fail())
 				{
-					cin.clear();//Çå³ı´íÎó±êÖ¾
-					cin.ignore(10000, '\n');//Çå³ı»º³åÇøµÄµ±Ç°ĞĞ
+					cin.clear();//æ¸…é™¤é”™è¯¯æ ‡å¿—
+					cin.ignore(10000, '\n');//æ¸…é™¤ç¼“å†²åŒºçš„å½“å‰è¡Œ
 					continue;
 				}
 				if (a <= 0 || b <= 0 || c <= 0 || d <= 0)
@@ -116,10 +116,11 @@ int main()
 		}
 		else
 		{
-			cout << "¸öÊıÊäÈë´íÎó" << endl;
+			cout << "ä¸ªæ•°è¾“å…¥é”™è¯¯" << endl;
 			break;
 		}
 	}
 
 	return 0;
+
 }
