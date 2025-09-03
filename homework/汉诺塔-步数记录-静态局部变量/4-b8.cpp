@@ -1,27 +1,27 @@
-/* 1850917 ÁºÊ«Ñþ µçÐÅ */
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
-/* ----¾ßÌåÒªÇó----
-   1¡¢²»ÔÊÐíÌí¼ÓÆäËüÍ·ÎÄ¼þ
-   2¡¢²»ÔÊÐí¶¨ÒåÈ«¾Ö±äÁ¿¡¢½öÔÊÐíhanoiÖÐ¶¨ÒåÒ»¸ö¾²Ì¬¾Ö²¿±äÁ¿
-   3¡¢ÔÊÐíÌí¼ÓÓÃÓÚÊäÈë²ãÊý¡¢ÆðÊ¼/Ä¿±êÖùµÄº¯Êý£¬º¯ÊýÖÐÔÊÐíÊ¹ÓÃÑ­»·´¦Àí´íÎóÊäÈë
-   4¡¢Èç¹ûÊäÈëÓÃº¯Êý½øÐÐ£¬ÔòmainÖÐ²»ÔÊÐí³öÏÖÈÎºÎÐÎÊ½µÄÑ­»·£¨while¡¢do-while¡¢for¡¢if-goto£©
-      Èç¹ûÊäÈëÔÚmainÖÐ½øÐÐ£¬ÔòmainÖÐÔÊÐí³öÏÖÑ­»·
+/* ----å…·ä½“è¦æ±‚----
+   1ã€ä¸å…è®¸æ·»åŠ å…¶å®ƒå¤´æ–‡ä»¶
+   2ã€ä¸å…è®¸å®šä¹‰å…¨å±€å˜é‡ã€ä»…å…è®¸hanoiä¸­å®šä¹‰ä¸€ä¸ªé™æ€å±€éƒ¨å˜é‡
+   3ã€å…è®¸æ·»åŠ ç”¨äºŽè¾“å…¥å±‚æ•°ã€èµ·å§‹/ç›®æ ‡æŸ±çš„å‡½æ•°ï¼Œå‡½æ•°ä¸­å…è®¸ä½¿ç”¨å¾ªçŽ¯å¤„ç†é”™è¯¯è¾“å…¥
+   4ã€å¦‚æžœè¾“å…¥ç”¨å‡½æ•°è¿›è¡Œï¼Œåˆ™mainä¸­ä¸å…è®¸å‡ºçŽ°ä»»ä½•å½¢å¼çš„å¾ªçŽ¯ï¼ˆwhileã€do-whileã€forã€if-gotoï¼‰
+      å¦‚æžœè¾“å…¥åœ¨mainä¸­è¿›è¡Œï¼Œåˆ™mainä¸­å…è®¸å‡ºçŽ°å¾ªçŽ¯
    --------------------------------------------------------------------- */
 
    /***************************************************************************
-     º¯ÊýÃû³Æ£º
-     ¹¦    ÄÜ£º´òÓ¡n²ãººÅµËþµÄÒÆ¶¯Ë³Ðò
-     ÊäÈë²ÎÊý£ºint n£º²ãÊý
-               char src£ºÆðÊ¼Öù
-               char tmp£ºÖÐ¼äÖù
-               char dst£ºÄ¿±êÖù
-     ·µ »Ø Öµ£º
-     Ëµ    Ã÷£º1¡¢º¯ÊýÃû¡¢ÐÎ²Î¡¢·µ»ØÀàÐÍ¾ù²»×¼¶¯
-               2¡¢±¾º¯Êý²»ÔÊÐí³öÏÖÈÎºÎÐÎÊ½µÄÑ­»·
-               3¡¢ÔÊÐí¶¨ÒåÒ»¸ö¾²Ì¬¾Ö²¿±äÁ¿
+     å‡½æ•°åç§°ï¼š
+     åŠŸ    èƒ½ï¼šæ‰“å°nå±‚æ±‰è¯ºå¡”çš„ç§»åŠ¨é¡ºåº
+     è¾“å…¥å‚æ•°ï¼šint nï¼šå±‚æ•°
+               char srcï¼šèµ·å§‹æŸ±
+               char tmpï¼šä¸­é—´æŸ±
+               char dstï¼šç›®æ ‡æŸ±
+     è¿” å›ž å€¼ï¼š
+     è¯´    æ˜Žï¼š1ã€å‡½æ•°åã€å½¢å‚ã€è¿”å›žç±»åž‹å‡ä¸å‡†åŠ¨
+               2ã€æœ¬å‡½æ•°ä¸å…è®¸å‡ºçŽ°ä»»ä½•å½¢å¼çš„å¾ªçŽ¯
+               3ã€å…è®¸å®šä¹‰ä¸€ä¸ªé™æ€å±€éƒ¨å˜é‡
    ***************************************************************************/
 void hanoi(int n, char src, char tmp, char dst)
 {
@@ -40,18 +40,18 @@ void hanoi(int n, char src, char tmp, char dst)
     }
 }
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£ºÊäÈëººÅµËþµÄ²ãÊý
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šè¾“å…¥æ±‰è¯ºå¡”çš„å±‚æ•°
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼š
 ***************************************************************************/
 int inputLayer()
 {
     int layer = 0;
     while (1)
     {
-        cout << "ÇëÊäÈëººÅµËþµÄ²ãÊý(1-16)" << endl;
+        cout << "è¯·è¾“å…¥æ±‰è¯ºå¡”çš„å±‚æ•°(1-16)" << endl;
         cin >> layer;
         if (cin.good() && layer > 0 && layer <= 16)
             break;
@@ -68,18 +68,18 @@ int inputLayer()
 }
 
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£ºÊäÈëººÅµËþµÄÆðÊ¼Öù
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šè¾“å…¥æ±‰è¯ºå¡”çš„èµ·å§‹æŸ±
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼š
 ***************************************************************************/
 char inputStartColumn()
 {
     char startColumn = 'A';
     while (1)
     {
-        cout << "ÇëÊäÈëÆðÊ¼Öù(A-C)" << endl;
+        cout << "è¯·è¾“å…¥èµ·å§‹æŸ±(A-C)" << endl;
         cin >> startColumn;
         if (cin.good()&& (startColumn >= 'A' && startColumn <= 'C' || startColumn >= 'a' && startColumn <= 'c'))
             break;
@@ -100,18 +100,18 @@ char inputStartColumn()
 }
 
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£ºÊäÈëººÅµËþµÄÄ¿±êÖù
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šè¾“å…¥æ±‰è¯ºå¡”çš„ç›®æ ‡æŸ±
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼š
 ***************************************************************************/
 char inputTargetColumn(char startColumn)
 {
     char targetColumn = 'A';
     while (1)
     {
-        cout << "ÇëÊäÈëÄ¿±êÖù(A-C)" << endl;
+        cout << "è¯·è¾“å…¥ç›®æ ‡æŸ±(A-C)" << endl;
         cin >> targetColumn;
         if (cin.good() && (targetColumn >= 'A' && targetColumn <= 'C' || targetColumn >= 'a' && targetColumn <= 'c'))
         {
@@ -131,11 +131,11 @@ char inputTargetColumn(char startColumn)
     return targetColumn;
 }
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£ºÅÐ¶ÏÖÐ¼äÖù
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šåˆ¤æ–­ä¸­é—´æŸ±
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼š
 ***************************************************************************/
 char inputTransitColumn(char startColumn, char targetColumn)
 {
@@ -165,11 +165,11 @@ char inputTransitColumn(char startColumn, char targetColumn)
 }
 
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£º
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£ºÍê³ÉÊäÈë(»òµ÷ÓÃÊäÈëº¯Êý)¡¢µ÷ÓÃµÝ¹éº¯Êý
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼š
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼šå®Œæˆè¾“å…¥(æˆ–è°ƒç”¨è¾“å…¥å‡½æ•°)ã€è°ƒç”¨é€’å½’å‡½æ•°
 ***************************************************************************/
 int main()
 {
@@ -180,9 +180,10 @@ int main()
     targetColumn = inputTargetColumn(startColumn);
     transitColumn = inputTransitColumn(startColumn, targetColumn);
 
-    cout << "ÒÆ¶¯²½ÖèÎª:" << endl;
+    cout << "ç§»åŠ¨æ­¥éª¤ä¸º:" << endl;
     hanoi(layer, startColumn, transitColumn, targetColumn);
 
     cout << endl;
     return 0;
+
 }
