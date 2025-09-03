@@ -1,4 +1,4 @@
-/* 1850917 µçĞÅ ÁºÊ«Ñş */
+
 #include <iostream>
 #include <iomanip>
 #include <conio.h>
@@ -7,56 +7,56 @@
 #include "90-b2.h"
 
 using namespace std;
-/*·ÅcmdÎ±Í¼ĞÎ½çÃæ·½Ê½ÊµÏÖµÄ¸÷º¯Êı*/
+/*æ”¾cmdä¼ªå›¾å½¢ç•Œé¢æ–¹å¼å®ç°çš„å„å‡½æ•°*/
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÏÔÊ¾µ±Ç°Êı×éÍâ¿ò
-  ÊäÈë²ÎÊı£ºint x_pos, Êı×é·½¿ò×óÉÏ½Çx×ø±ê
-			int y_pos, Êı×é·½¿ò×óÉÏ½Çy×ø±ê
-			const int row, Êı×éĞĞÊı
-			const int col, Êı×éÁĞÊı
-			int mode, Ä£Ê½
-					1£ºÊı×ÖÉ«¿é¼äÎŞ·Ö¸ôÏß
-					2£ºÊı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß
-					3£ºÊı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß(ÎŞÊ±¼ä¼ä¸ô£©
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ˜¾ç¤ºå½“å‰æ•°ç»„å¤–æ¡†
+  è¾“å…¥å‚æ•°ï¼šint x_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’xåæ ‡
+			int y_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’yåæ ‡
+			const int row, æ•°ç»„è¡Œæ•°
+			const int col, æ•°ç»„åˆ—æ•°
+			int mode, æ¨¡å¼
+					1ï¼šæ•°å­—è‰²å—é—´æ— åˆ†éš”çº¿
+					2ï¼šæ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿
+					3ï¼šæ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿(æ— æ—¶é—´é—´éš”ï¼‰
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode)
 {
-	int line =0;//´°¿ÚĞĞ
-	int column = 0;//´°¿ÚÁĞ
+	int line =0;//çª—å£è¡Œ
+	int column = 0;//çª—å£åˆ—
 
-	int x = 0, y = 0;//¹â±ê×ø±ê
+	int x = 0, y = 0;//å…‰æ ‡åæ ‡
 
 	switch (mode)
 	{
-		case 1://Êı×ÖÉ«¿é¼äÎŞ·Ö¸ôÏß
+		case 1://æ•°å­—è‰²å—é—´æ— åˆ†éš”çº¿
 		{
-			line = row * 3 + 7;//´°¿ÚĞĞ
-			column = col * 6 + 5;//´°¿ÚÁĞ
+			line = row * 3 + 7;//çª—å£è¡Œ
+			column = col * 6 + 5;//çª—å£åˆ—
 
-			/* demoÖĞÊ×ÏÈÖ´ĞĞ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ĞĞx120ÁĞ£¨»º³åÇø¿í¶È120ÁĞ£¬ĞĞÊı9000ĞĞ£¬¼´cmd´°¿ÚÓÒ²à´øÓĞ´¹Ö±¹ö¶¯¸Ë£©*/
+			/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰å‚ç›´æ»šåŠ¨æ†ï¼‰*/
 			cct_setconsoleborder(column, line, column, 9000);
 
 			cct_setcolor(COLOR_WHITE, COLOR_BLACK);
 
-			/*ÉÏºáÏß*/
+			/*ä¸Šæ¨ªçº¿*/
 			cct_gotoxy(x_pos, y_pos);
 
-			cout << "¨X";
+			cout << "â•”";
 
 			Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 
 				Sleep(TIME);
 			}
 
-			cout << "¨[";
+			cout << "â•—";
 
 			Sleep(TIME);
 
@@ -64,7 +64,7 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 			/*cout << "x=" << x << endl;
 			cout << "y=" << y << endl;*/
 
-			/*´òÓ¡Á½±ßÊúÏß*/
+			/*æ‰“å°ä¸¤è¾¹ç«–çº¿*/
 			for (int i = 0; i < 3 * row; i++)
 			{
 				y++;
@@ -75,7 +75,7 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 					{
 						cct_gotoxy(0, y);
 
-						cout << "¨U";
+						cout << "â•‘";
 
 						Sleep(TIME);
 					}
@@ -83,7 +83,7 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 					{
 						cct_gotoxy(x - 2, y);
 
-						cout << "¨U";
+						cout << "â•‘";
 
 						Sleep(TIME);
 					}
@@ -92,52 +92,52 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 
 			cct_getxy(x, y);
 
-			/*ÏÂºáÏß*/
+			/*ä¸‹æ¨ªçº¿*/
 			cct_gotoxy(0, y + 1);
 
-			cout << "¨^";
+			cout << "â•š";
 
 			Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 
 				Sleep(TIME);
 			}
 
-			cout << "¨a";
+			cout << "â•";
 
 			Sleep(TIME);
 
 			cct_setcolor();
 			break;
 		}
-		case 2://Êı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß
+		case 2://æ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿
 		{
-			line = row * 3 + row - 1 + 7;//´°¿ÚĞĞ
-			column = col * 6 + (col - 1) * 2 + 5;//´°¿ÚÁĞ
+			line = row * 3 + row - 1 + 7;//çª—å£è¡Œ
+			column = col * 6 + (col - 1) * 2 + 5;//çª—å£åˆ—
 
-			/* demoÖĞÊ×ÏÈÖ´ĞĞ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ĞĞx120ÁĞ£¨»º³åÇø¿í¶È120ÁĞ£¬ĞĞÊı9000ĞĞ£¬¼´cmd´°¿ÚÓÒ²à´øÓĞ´¹Ö±¹ö¶¯¸Ë£©*/
+			/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰å‚ç›´æ»šåŠ¨æ†ï¼‰*/
 			cct_setconsoleborder(column, line, column, 9000);
 
 			cct_setcolor(COLOR_WHITE, COLOR_BLACK);
 
-			/*ÉÏºáÏß*/
+			/*ä¸Šæ¨ªçº¿*/
 			cct_gotoxy(x_pos, y_pos);
-			cout << "¨X";
+			cout << "â•”";
 			Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 				if (i != col - 1)
-					cout << "¨h";
+					cout << "â•¤";
 
 				Sleep(TIME);
 			}
 
-			cout << "¨[";
+			cout << "â•—";
 
 			Sleep(TIME);
 
@@ -146,10 +146,10 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 			/*cout << "x=" << x << endl;
 			cout << "y=" << y << endl;*/
 
-			/*´òÓ¡Á½±ßÊúÏß*/
+			/*æ‰“å°ä¸¤è¾¹ç«–çº¿*/
 			for (int i = 0; i < 3 * row; i++)
 			{
-				y++;//ÏÂÒÆÒ»ĞĞ
+				y++;//ä¸‹ç§»ä¸€è¡Œ
 
 				for (int j = 0; j < col; j++)
 				{
@@ -161,34 +161,34 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 						{
 							cct_gotoxy(0, y);
 
-							cout << "¨c";
+							cout << "â•Ÿ";
 
-							/*´òÓ¡ÖĞ¼ä·Ö¸ôºáÏß*/
+							/*æ‰“å°ä¸­é—´åˆ†éš”æ¨ªçº¿*/
 							for (int k = 0; k < col; k++)
 							{
-								cout << "©¤©¤©¤";
+								cout << "â”€â”€â”€";
 								if (k != col - 1)
-									cout << "©à";
+									cout << "â”¼";
 
 								Sleep(TIME);
 							}
-							cout << "¨f";
+							cout << "â•¢";
 
-							y++;//ÏÂÒÆÒ»ĞĞ
+							y++;//ä¸‹ç§»ä¸€è¡Œ
 						}
 
 						cct_gotoxy(0, y);
 
-						cout << "¨U";
+						cout << "â•‘";
 
-						/*´òÓ¡ÖĞ¼ä·Ö¸ôÊúÏß*/
+						/*æ‰“å°ä¸­é—´åˆ†éš”ç«–çº¿*/
 						for (int k = 0; k < col; k++)
 						{
 							cout << setw(6) << ' ';
 							if (k == col - 1)
-								cout << "¨U";
+								cout << "â•‘";
 							else
-								cout << "©¦";
+								cout << "â”‚";
 
 							Sleep(TIME);
 						}
@@ -198,22 +198,22 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 
 			cct_getxy(x, y);
 
-			/*ÏÂºáÏß*/
+			/*ä¸‹æ¨ªçº¿*/
 			cct_gotoxy(0, y + 1);
 
-			cout << "¨^";
+			cout << "â•š";
 
 			Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 				if (i != col - 1)
-					cout << "¨k";
+					cout << "â•§";
 				Sleep(TIME);
 			}
 
-			cout << "¨a";
+			cout << "â•";
 
 			Sleep(TIME);
 
@@ -221,31 +221,31 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 
 			break;
 		}
-		case 3://Êı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß(ÎŞÊ±¼ä¼ä¸ô£©
+		case 3://æ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿(æ— æ—¶é—´é—´éš”ï¼‰
 		{
-			line = row * 3 + row - 1 + 7;//´°¿ÚĞĞ
-			column = col * 6 + (col - 1) * 2 + 5;//´°¿ÚÁĞ
+			line = row * 3 + row - 1 + 7;//çª—å£è¡Œ
+			column = col * 6 + (col - 1) * 2 + 5;//çª—å£åˆ—
 
-			/* demoÖĞÊ×ÏÈÖ´ĞĞ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ĞĞx120ÁĞ£¨»º³åÇø¿í¶È120ÁĞ£¬ĞĞÊı9000ĞĞ£¬¼´cmd´°¿ÚÓÒ²à´øÓĞ´¹Ö±¹ö¶¯¸Ë£©*/
+			/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰å‚ç›´æ»šåŠ¨æ†ï¼‰*/
 			cct_setconsoleborder(column, line, column, 9000);
 
 			cct_setcolor(COLOR_WHITE, COLOR_BLACK);
 
-			/*ÉÏºáÏß*/
+			/*ä¸Šæ¨ªçº¿*/
 			cct_gotoxy(x_pos, y_pos);
-			cout << "¨X";
+			cout << "â•”";
 			//Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 				if (i != col - 1)
-					cout << "¨h";
+					cout << "â•¤";
 
 				//Sleep(TIME);
 			}
 
-			cout << "¨[";
+			cout << "â•—";
 
 			//Sleep(TIME);
 
@@ -254,10 +254,10 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 			/*cout << "x=" << x << endl;
 			cout << "y=" << y << endl;*/
 
-			/*´òÓ¡Á½±ßÊúÏß*/
+			/*æ‰“å°ä¸¤è¾¹ç«–çº¿*/
 			for (int i = 0; i < 3 * row; i++)
 			{
-				y++;//ÏÂÒÆÒ»ĞĞ
+				y++;//ä¸‹ç§»ä¸€è¡Œ
 
 				for (int j = 0; j < col; j++)
 				{
@@ -269,34 +269,34 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 						{
 							cct_gotoxy(0, y);
 
-							cout << "¨c";
+							cout << "â•Ÿ";
 
-							/*´òÓ¡ÖĞ¼ä·Ö¸ôºáÏß*/
+							/*æ‰“å°ä¸­é—´åˆ†éš”æ¨ªçº¿*/
 							for (int k = 0; k < col; k++)
 							{
-								cout << "©¤©¤©¤";
+								cout << "â”€â”€â”€";
 								if (k != col - 1)
-									cout << "©à";
+									cout << "â”¼";
 
 								//Sleep(TIME);
 							}
-							cout << "¨f";
+							cout << "â•¢";
 
-							y++;//ÏÂÒÆÒ»ĞĞ
+							y++;//ä¸‹ç§»ä¸€è¡Œ
 						}
 
 						cct_gotoxy(0, y);
 
-						cout << "¨U";
+						cout << "â•‘";
 
-						/*´òÓ¡ÖĞ¼ä·Ö¸ôÊúÏß*/
+						/*æ‰“å°ä¸­é—´åˆ†éš”ç«–çº¿*/
 						for (int k = 0; k < col; k++)
 						{
 							cout << setw(6) << ' ';
 							if (k == col - 1)
-								cout << "¨U";
+								cout << "â•‘";
 							else
-								cout << "©¦";
+								cout << "â”‚";
 
 							//Sleep(TIME);
 						}
@@ -306,22 +306,22 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 
 			cct_getxy(x, y);
 
-			/*ÏÂºáÏß*/
+			/*ä¸‹æ¨ªçº¿*/
 			cct_gotoxy(0, y + 1);
 
-			cout << "¨^";
+			cout << "â•š";
 
 			//Sleep(TIME);
 
 			for (int i = 0; i < col; i++)
 			{
-				cout << "¨T¨T¨T";
+				cout << "â•â•â•";
 				if (i != col - 1)
-					cout << "¨k";
+					cout << "â•§";
 				//Sleep(TIME);
 			}
 
-			cout << "¨a";
+			cout << "â•";
 
 			//Sleep(TIME);
 
@@ -335,16 +335,16 @@ void show_outer_frame(int x_pos, int y_pos,const int row, const int col,int mode
 	cct_setcolor();
 }
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÏÔÊ¾Ã¿¸öĞ¡¸ñ
-  ÊäÈë²ÎÊı£ºconst int x, Ã¿Ğ¡¸ñ×óÉÏ½ÇµÄx×ø±ê
-			const int y, Ã¿Ğ¡¸ñ×óÉÏ½ÇµÄy×ø±ê
-			int val, Ğ¡¸ñÖĞÏÔÊ¾µÄÖµ
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ˜¾ç¤ºæ¯ä¸ªå°æ ¼
+  è¾“å…¥å‚æ•°ï¼šconst int x, æ¯å°æ ¼å·¦ä¸Šè§’çš„xåæ ‡
+			const int y, æ¯å°æ ¼å·¦ä¸Šè§’çš„yåæ ‡
+			int val, å°æ ¼ä¸­æ˜¾ç¤ºçš„å€¼
 			int mode,
-				0£ºÑÕÉ«ÓëÖµÓĞ¹Ø
-				1£ºÖÃ¿ÕÎª±³¾°É«
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+				0ï¼šé¢œè‰²ä¸å€¼æœ‰å…³
+				1ï¼šç½®ç©ºä¸ºèƒŒæ™¯è‰²
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void show_cube(const int x, const int y, int val,int mode)
 {
@@ -357,53 +357,53 @@ void show_cube(const int x, const int y, int val,int mode)
 		cct_setcolor(COLOR_WHITE, COLOR_WHITE);
 	}
 	cct_gotoxy(x, y);
-	cout << "¨X";
-	cout << "¨T";
-	cout << "¨[";
+	cout << "â•”";
+	cout << "â•";
+	cout << "â•—";
 
 	cct_gotoxy(x, y + 1);
-	cout << "¨U";
+	cout << "â•‘";
 	cout << setw(2) << val;
-	cout << "¨U";
+	cout << "â•‘";
 
 	cct_gotoxy(x, y + 2);
-	cout << "¨^";
-	cout << "¨T";
-	cout << "¨a";
+	cout << "â•š";
+	cout << "â•";
+	cout << "â•";
 
 	cct_setcolor();
 
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÏÔÊ¾Êı×éÀïµÄËùÓĞĞ¡¸ñ
-  ÊäÈë²ÎÊı£ºint x_pos, Êı×é·½¿ò×óÉÏ½Çx×ø±ê
-			int y_pos, Êı×é·½¿ò×óÉÏ½Çy×ø±ê 
-			const int row, Êı×éĞĞÊı
-			const int col, Êı×éÁĞÊı
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ˜¾ç¤ºæ•°ç»„é‡Œçš„æ‰€æœ‰å°æ ¼
+  è¾“å…¥å‚æ•°ï¼šint x_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’xåæ ‡
+			int y_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’yåæ ‡ 
+			const int row, æ•°ç»„è¡Œæ•°
+			const int col, æ•°ç»„åˆ—æ•°
 			int matrix[][N],
-			int mode, Ä£Ê½
-					1£ºÊı×ÖÉ«¿é¼äÎŞ·Ö¸ôÏß
-					2£ºÊı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß
-					3£ºÊı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß(ÎŞÊ±¼ä¼ä¸ô£©+ÓÃ¼ıÍ·¼üÒÆ¶¯£¬»Ø³µ¼üÑ¡Ôñ
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+			int mode, æ¨¡å¼
+					1ï¼šæ•°å­—è‰²å—é—´æ— åˆ†éš”çº¿
+					2ï¼šæ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿
+					3ï¼šæ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿(æ— æ—¶é—´é—´éš”ï¼‰+ç”¨ç®­å¤´é”®ç§»åŠ¨ï¼Œå›è½¦é”®é€‰æ‹©
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matrix[][N],int mode)
 {
-	int line = 0;//´°¿ÚĞĞ
-	int column = 0;//´°¿ÚÁĞ
+	int line = 0;//çª—å£è¡Œ
+	int column = 0;//çª—å£åˆ—
 
 	int x = x_pos + 2;
 	int y = y_pos + 1;
 
 	switch (mode)
 	{
-		case 1://Êı×ÖÉ«¿é¼äÎŞ·Ö¸ôÏß
+		case 1://æ•°å­—è‰²å—é—´æ— åˆ†éš”çº¿
 		{
-			line = row * 3 + 7;//´°¿ÚĞĞ
-			column = col * 6 + 5;//´°¿ÚÁĞ
+			line = row * 3 + 7;//çª—å£è¡Œ
+			column = col * 6 + 5;//çª—å£åˆ—
 
 			for (int i = 0; i < row; i++)
 			{
@@ -419,15 +419,15 @@ void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matri
 
 			cct_gotoxy(x_pos, y_pos - 1);
 			cct_setcolor();
-			cout << "ÆÁÄ»µ±Ç°ÉèÖÃÎª£º" << line << "ĞĞ" << column << "ÁĞ";
+			cout << "å±å¹•å½“å‰è®¾ç½®ä¸ºï¼š" << line << "è¡Œ" << column << "åˆ—";
 			cct_gotoxy(x_pos, y_pos + row * 3 + 2);
 
 			break;
 		}
-		case 2://Êı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß
+		case 2://æ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿
 		{
-			line = row * 3 + row - 1 + 7;//´°¿ÚĞĞ
-			column = col * 6 + (col - 1) * 2 + 5;//´°¿ÚÁĞ
+			line = row * 3 + row - 1 + 7;//çª—å£è¡Œ
+			column = col * 6 + (col - 1) * 2 + 5;//çª—å£åˆ—
 
 			for (int i = 0; i < row; i++)
 			{
@@ -443,15 +443,15 @@ void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matri
 
 			cct_gotoxy(x_pos, y_pos - 1);
 			cct_setcolor();
-			cout << "ÆÁÄ»µ±Ç°ÉèÖÃÎª£º" << line << "ĞĞ" << column << "ÁĞ";
+			cout << "å±å¹•å½“å‰è®¾ç½®ä¸ºï¼š" << line << "è¡Œ" << column << "åˆ—";
 			cct_gotoxy(x_pos, y_pos + row * 4 + 1);
 
 			break;
 		}
-		case 3://Êı×ÖÉ«¿é¼äÓĞ·Ö¸ôÏß(ÎŞÊ±¼ä¼ä¸ô£©
+		case 3://æ•°å­—è‰²å—é—´æœ‰åˆ†éš”çº¿(æ— æ—¶é—´é—´éš”ï¼‰
 		{
-			line = row * 3 + row - 1 + 7;//´°¿ÚĞĞ
-			column = col * 6 + (col - 1) * 2 + 5;//´°¿ÚÁĞ
+			line = row * 3 + row - 1 + 7;//çª—å£è¡Œ
+			column = col * 6 + (col - 1) * 2 + 5;//çª—å£åˆ—
 
 			for (int i = 0; i < row; i++)
 			{
@@ -467,7 +467,7 @@ void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matri
 
 			cct_gotoxy(x_pos, y_pos - 1);
 			cct_setcolor();
-			cout << "ÆÁÄ»µ±Ç°ÉèÖÃÎª£º" << line << "ĞĞ" << column << "ÁĞ";
+			cout << "å±å¹•å½“å‰è®¾ç½®ä¸ºï¼š" << line << "è¡Œ" << column << "åˆ—";
 
 			break;
 		}
@@ -475,13 +475,13 @@ void show_arr_cube(int x_pos, int y_pos, const int row, const int col, int matri
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÎ±Í¼ĞÎ½çÃæÏÂÏÔÊ¾µ±Ç°ËùÑ¡É«¿é
-  ÊäÈë²ÎÊı£ºconst int x, Ã¿Ğ¡¸ñ×óÉÏ½ÇµÄx×ø±ê
-			const int y, Ã¿Ğ¡¸ñ×óÉÏ½ÇµÄy×ø±ê
-			int val, Ğ¡¸ñÖĞÏÔÊ¾µÄÖµ
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šä¼ªå›¾å½¢ç•Œé¢ä¸‹æ˜¾ç¤ºå½“å‰æ‰€é€‰è‰²å—
+  è¾“å…¥å‚æ•°ï¼šconst int x, æ¯å°æ ¼å·¦ä¸Šè§’çš„xåæ ‡
+			const int y, æ¯å°æ ¼å·¦ä¸Šè§’çš„yåæ ‡
+			int val, å°æ ¼ä¸­æ˜¾ç¤ºçš„å€¼
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void show_sel_cube(const int x, const int y, int val, int mode)
 {
@@ -495,45 +495,45 @@ void show_sel_cube(const int x, const int y, int val, int mode)
 	}
 
 	cct_gotoxy(x, y);
-	cout << "¨X";
-	cout << "¨T";
-	cout << "¨[";
+	cout << "â•”";
+	cout << "â•";
+	cout << "â•—";
 
 	cct_gotoxy(x, y + 1);
-	cout << "¨U";
+	cout << "â•‘";
 	cout << setw(2) << val;
-	cout << "¨U";
+	cout << "â•‘";
 
 	cct_gotoxy(x, y + 2);
-	cout << "¨^";
-	cout << "¨T";
-	cout << "¨a";
+	cout << "â•š";
+	cout << "â•";
+	cout << "â•";
 
 	cct_setcolor();
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÎ±Í¼ĞÎ½çÃæÏÂÓÃ¼ıÍ·Ñ¡Ôñµ±Ç°É«¿é
-  ÊäÈë²ÎÊı£ºint x_pos, Êı×é·½¿ò×óÉÏ½Çx×ø±ê
-			int y_pos, Êı×é·½¿ò×óÉÏ½Çy×ø±ê
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šä¼ªå›¾å½¢ç•Œé¢ä¸‹ç”¨ç®­å¤´é€‰æ‹©å½“å‰è‰²å—
+  è¾“å…¥å‚æ•°ï¼šint x_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’xåæ ‡
+			int y_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’yåæ ‡
 			int& row_pos, 
-			int& col_pos, ¿ªÊ¼ÒÆ¶¯µÄ³õÊ¼×ø±ê£¬ÒÔ¼°±ä»¯ºóµÄ×ø±ê
-			const int row, Êı×éĞĞÊı
-			const int col, Êı×éÁĞÊı
+			int& col_pos, å¼€å§‹ç§»åŠ¨çš„åˆå§‹åæ ‡ï¼Œä»¥åŠå˜åŒ–åçš„åæ ‡
+			const int row, æ•°ç»„è¡Œæ•°
+			const int col, æ•°ç»„åˆ—æ•°
 			int matrix[][N],
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos, const int row, const int col, int matrix[][N],int pos[][N],int mode)
 {
-	cct_setcursor(CURSOR_INVISIBLE);//ÉèÖÃ¹â±ê²»ÏÔÊ¾
+	cct_setcursor(CURSOR_INVISIBLE);//è®¾ç½®å…‰æ ‡ä¸æ˜¾ç¤º
 
 	cct_gotoxy(x_pos, y_pos + row * 4 + 1);
-	cout << "¼ıÍ·¼üÒÆ¶¯£¬»Ø³µ¼üÑ¡Ôñ";
+	cout << "ç®­å¤´é”®ç§»åŠ¨ï¼Œå›è½¦é”®é€‰æ‹©";
 	
-	int x = x_pos + 2;//¹â±êx×ø±ê
-	int y = y_pos + 1;//¹â±êy×ø±ê
+	int x = x_pos + 2;//å…‰æ ‡xåæ ‡
+	int y = y_pos + 1;//å…‰æ ‡yåæ ‡
 
 	/*row_pos = 0;
 	col_pos = 0;*/
@@ -550,7 +550,7 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 		{
 			if (chInput == '\r')
 			{
-				//½øĞĞÑ¡Ôñ
+				//è¿›è¡Œé€‰æ‹©
 				cct_gotoxy(x_pos, y_pos + row * 4 + 1);
 				cout << setw(50) << ' ';
 				cct_gotoxy(x_pos, y_pos + row * 4 + 1);
@@ -562,23 +562,23 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 		{
 			if (chInput == '\r')
 			{
-				//½øĞĞÑ¡Ôñ
+				//è¿›è¡Œé€‰æ‹©
 				if (is_adjacent_same(row, col, row_pos, col_pos, matrix))
 				{
 					cct_gotoxy(x_pos, y_pos + row * 4 + 1);
 					cout << setw(50) << ' ';
 
 					cct_gotoxy(x_pos, y_pos + row * 4 + 1);
-					cout << "¼ıÍ·¼üÒÆ¶¯²¢È¡Ïûµ±Ç°Ñ¡Ôñ£¬»Ø³µ¼üºÏ³É";
+					cout << "ç®­å¤´é”®ç§»åŠ¨å¹¶å–æ¶ˆå½“å‰é€‰æ‹©ï¼Œå›è½¦é”®åˆæˆ";
 					mode = 0;
 
-					/*ÕÒÏàÁÚÏàÍ¬Öµ£¨µİ¹é·½Ê½£©*/
+					/*æ‰¾ç›¸é‚»ç›¸åŒå€¼ï¼ˆé€’å½’æ–¹å¼ï¼‰*/
 					seek_same_val_recursive(row, col, row_pos, col_pos, matrix, pos);
 
-					/*ÏÔÊ¾ÏàÁÚÏàÍ¬Öµ*/
+					/*æ˜¾ç¤ºç›¸é‚»ç›¸åŒå€¼*/
 					show_arr(x_pos, y_pos, row, col, matrix, pos);
 					
-					/*ËùÑ¡Î»ÖÃµÄÇ°¾°É«±äÎªºìÉ«*/
+					/*æ‰€é€‰ä½ç½®çš„å‰æ™¯è‰²å˜ä¸ºçº¢è‰²*/
 					show_sel_cube(x, y, matrix[row_pos][col_pos], 1);
 
 					continue;
@@ -590,20 +590,20 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 
 					cct_setcolor(COLOR_BLACK, COLOR_HYELLOW);
 					cct_gotoxy(x_pos, y_pos + row * 4 + 1);
-					cout << "ÖÜÎ§ÎŞÏàÍ¬Öµ£¬";
+					cout << "å‘¨å›´æ— ç›¸åŒå€¼ï¼Œ";
 					cct_setcolor();
 
-					cout << "¼ıÍ·¼üÒÆ¶¯£¬»Ø³µ¼üÑ¡Ôñ";
+					cout << "ç®­å¤´é”®ç§»åŠ¨ï¼Œå›è½¦é”®é€‰æ‹©";
 					continue;
 				}
 			}
 		}
 
 		mode = 1;
-		show_cube(x, y, matrix[row_pos][col_pos]);//»Ö¸´Î´Ñ¡ÖĞÊ±ÑÕÉ«
-		show_arr(x_pos, y_pos, row, col, matrix, pos, 1);//»Ö¸´Î´Ñ¡ÖĞÊ±ÑÕÉ«
+		show_cube(x, y, matrix[row_pos][col_pos]);//æ¢å¤æœªé€‰ä¸­æ—¶é¢œè‰²
+		show_arr(x_pos, y_pos, row, col, matrix, pos, 1);//æ¢å¤æœªé€‰ä¸­æ—¶é¢œè‰²
 
-		/*ÖØÖÃ¼ÇÂ¼Î»ÖÃÊı×é*/
+		/*é‡ç½®è®°å½•ä½ç½®æ•°ç»„*/
 		reset(row, col, pos);
 
 		if (mode == 1)
@@ -611,14 +611,14 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 			cct_gotoxy(x_pos, y_pos + row * 4 + 1);
 			cout << setw(50) << ' ';
 			cct_gotoxy(x_pos, y_pos + row * 4 + 1);
-			cout << "¼ıÍ·¼üÒÆ¶¯£¬»Ø³µ¼üÑ¡Ôñ";
+			cout << "ç®­å¤´é”®ç§»åŠ¨ï¼Œå›è½¦é”®é€‰æ‹©";
 		}
 
-		/*ÓÃ¼ıÍ·½øĞĞ¹â±êÒÆ¶¯*/
+		/*ç”¨ç®­å¤´è¿›è¡Œå…‰æ ‡ç§»åŠ¨*/
 		if (int(chInput) == -32)
 		{
 			chInput = _getch();
-			if (int(chInput) == 72)//ÉÏ
+			if (int(chInput) == 72)//ä¸Š
 			{
 				row_pos--;
 
@@ -632,7 +632,7 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 					y = y_pos + 1 + row_pos * 4;
 				}
 			}
-			else if (int(chInput) == 80)//ÏÂ
+			else if (int(chInput) == 80)//ä¸‹
 			{
 				row_pos++;
 
@@ -646,7 +646,7 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 					y = y_pos + 1 + row_pos * 4;
 				}
 			}
-			else if (int(chInput) == 75)//×ó
+			else if (int(chInput) == 75)//å·¦
 			{
 				col_pos--;
 
@@ -660,7 +660,7 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 					x = x_pos + 2 + col_pos * 8;
 				}
 			}
-			else if (int(chInput) == 77)//ÓÒ
+			else if (int(chInput) == 77)//å³
 			{
 				col_pos++;
 
@@ -685,28 +685,28 @@ void move_by_arrow(const int x_pos, const int y_pos, int& row_pos, int& col_pos,
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÎ±Í¼ĞÎ½çÃæÏÂÏÔÊ¾µ±Ç°Êı×éÏàÁÚÏàÍ¬ÖµÉ«¿éµÄ²»Í¬²Ù×÷
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N], ´æ·ÅËæ»úÊıµÄ¾ØÕó
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄ¾ØÕó
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šä¼ªå›¾å½¢ç•Œé¢ä¸‹æ˜¾ç¤ºå½“å‰æ•°ç»„ç›¸é‚»ç›¸åŒå€¼è‰²å—çš„ä¸åŒæ“ä½œ
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N], å­˜æ”¾éšæœºæ•°çš„çŸ©é˜µ
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„çŸ©é˜µ
 			int mode, 
-			0£ºÏÔÊ¾Êı×éÖĞÑ¡ÖĞÎ»ÖÃÏàÁÚÏàÍ¬ÖµÉ«¿é
-			1£º»Ö¸´Êı×éÖĞÏàÁÚÏàÍ¬ÖµÉ«¿é
-			2£ºÖÃÁãºóÇå¿Õ
-			3£ºÏÔÊ¾ĞÂÖµ
+			0ï¼šæ˜¾ç¤ºæ•°ç»„ä¸­é€‰ä¸­ä½ç½®ç›¸é‚»ç›¸åŒå€¼è‰²å—
+			1ï¼šæ¢å¤æ•°ç»„ä¸­ç›¸é‚»ç›¸åŒå€¼è‰²å—
+			2ï¼šç½®é›¶åæ¸…ç©º
+			3ï¼šæ˜¾ç¤ºæ–°å€¼
 
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void show_arr(int x_pos, int y_pos, const int row, const int col, int matrix[][N], int pos[][N],int mode)
 {
 	int x_start, y_start;
 	cct_getxy(x_start, y_start);
 
-	int x = 0;//¹â±êx×ø±ê
-	int y = 0;//¹â±êy×ø±ê
+	int x = 0;//å…‰æ ‡xåæ ‡
+	int y = 0;//å…‰æ ‡yåæ ‡
 	if (mode == 0)
 	{
 		for (int row_pos = 0; row_pos < row; row_pos++)
@@ -773,16 +773,16 @@ void show_arr(int x_pos, int y_pos, const int row, const int col, int matrix[][N
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÎ±Í¼ĞÎ½çÃæÏÂÏÔÊ¾Êı×éÏÂÂä³ı0
-  ÊäÈë²ÎÊı£ºint x_pos, Êı×é·½¿ò×óÉÏ½Çx×ø±ê
-			int y_pos, Êı×é·½¿ò×óÉÏ½Çy×ø±ê
-			const int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šä¼ªå›¾å½¢ç•Œé¢ä¸‹æ˜¾ç¤ºæ•°ç»„ä¸‹è½é™¤0
+  è¾“å…¥å‚æ•°ï¼šint x_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’xåæ ‡
+			int y_pos, æ•°ç»„æ–¹æ¡†å·¦ä¸Šè§’yåæ ‡
+			const int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void fall_down(const int x_pos, const int y_pos, const int row, const int col, const int row_pos, const int col_pos, int matrix[][N], int pos[][N])
 {
@@ -793,15 +793,15 @@ void fall_down(const int x_pos, const int y_pos, const int row, const int col, c
 	int y = 0;
 
 
-	for (int i = 0; i < col; i++)//ÁĞ
+	for (int i = 0; i < col; i++)//åˆ—
 	{
-		for (int j = row - 1; j > 0; j--)//ĞĞ
+		for (int j = row - 1; j > 0; j--)//è¡Œ
 		{
-			if (pos[j][i])//0µÄÎ»ÖÃ
+			if (pos[j][i])//0çš„ä½ç½®
 			{
-				for (int top = j; top >=0; top--)//ÏòÉÏÕÒ²»ÎªÁãµÄÎ»ÖÃ
+				for (int top = j; top >=0; top--)//å‘ä¸Šæ‰¾ä¸ä¸ºé›¶çš„ä½ç½®
 				{
-					if (pos[top][i]==0)//²»ÎªÁãµÄÎ»ÖÃ
+					if (pos[top][i]==0)//ä¸ä¸ºé›¶çš„ä½ç½®
 					{
 						pos[top][i] = -1;
 						int move_top = top;
@@ -810,7 +810,7 @@ void fall_down(const int x_pos, const int y_pos, const int row, const int col, c
 						y = y_pos + 1 + top * 4;
 						int val = matrix[top][i];
 
-						while (move_top <j)//ÏòÏÂÒÆ¶¯
+						while (move_top <j)//å‘ä¸‹ç§»åŠ¨
 						{
 							for (int p = 0; p < 4; p++)
 							{
@@ -820,10 +820,10 @@ void fall_down(const int x_pos, const int y_pos, const int row, const int col, c
 								show_cube(x, y, val);
 								Sleep(TIME);
 							}
-							/*²¹¿òÏß*/
+							/*è¡¥æ¡†çº¿*/
 							cct_gotoxy(x, y - 1);
 							cct_setcolor(COLOR_WHITE, COLOR_BLACK);
-							cout << "©¤©¤©¤";
+							cout << "â”€â”€â”€";
 							cct_setcolor();
 							//show_outer_frame(0, 1, row, col, 3);
 							move_top++;
@@ -835,4 +835,5 @@ void fall_down(const int x_pos, const int y_pos, const int row, const int col, c
 		}
 	}
 }
+
 
