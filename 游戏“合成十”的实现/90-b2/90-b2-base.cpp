@@ -1,4 +1,4 @@
-/* 1850917 µçĞÅ ÁºÊ«Ñş */
+
 #include <iostream>
 #include <cstdio>
 #include <iomanip>
@@ -7,16 +7,16 @@
 #include "cmd_console_tools.h"
 #include "90-b2.h"
 using namespace std;
-/*·ÅÄÚ²¿Êı×é·½Ê½ÊµÏÖµÄ¸÷º¯Êı*/
+/*æ”¾å†…éƒ¨æ•°ç»„æ–¹å¼å®ç°çš„å„å‡½æ•°*/
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÉú³ÉËæ»úÖµ
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N], ´æ·ÅËæ»úÊıµÄ¾ØÕó
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šç”Ÿæˆéšæœºå€¼
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N], å­˜æ”¾éšæœºæ•°çš„çŸ©é˜µ
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void generate_matrix(const int row, const int col, int matrix[][N])
 {
@@ -29,23 +29,23 @@ void generate_matrix(const int row, const int col, int matrix[][N])
 	}
 }
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÏÔÊ¾Êı×é
-  ÊäÈë²ÎÊı£ºint mode, Ä£Ê½£º
-							1. ÏÔÊ¾"µ±Ç°Êı×é£º"
-							2. ÏÔÊ¾"²éÕÒ½á¹ûÊı×é£º"
-							//3. ÏÔÊ¾"µ±Ç°Êı×é(²»Í¬É«±êÊ¶)£º"
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ˜¾ç¤ºæ•°ç»„
+  è¾“å…¥å‚æ•°ï¼šint mode, æ¨¡å¼ï¼š
+							1. æ˜¾ç¤º"å½“å‰æ•°ç»„ï¼š"
+							2. æ˜¾ç¤º"æŸ¥æ‰¾ç»“æœæ•°ç»„ï¼š"
+							//3. æ˜¾ç¤º"å½“å‰æ•°ç»„(ä¸åŒè‰²æ ‡è¯†)ï¼š"
 			char* prompt,
-			const int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int str[][N], ÒªÏÔÊ¾µÄ¾ØÕó
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+			const int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int str[][N], è¦æ˜¾ç¤ºçš„çŸ©é˜µ
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void print_matrix(int mode,const char *prompt, const int row, const int col, int str[][N])
 {
 	cout << prompt << endl;
-	/*ºáÀ¸*/
+	/*æ¨ªæ */
 	cout << setw(2) << ' ';
 	cout << '|';
 	for (int i = 0; i < col; i++)
@@ -53,14 +53,14 @@ void print_matrix(int mode,const char *prompt, const int row, const int col, int
 		cout << setw(3) << i;
 	}
 	cout << endl;
-	/*·Ö½çÏß*/
+	/*åˆ†ç•Œçº¿*/
 	cout << "--+";
 	for (int i = 0; i < col; i++)
 	{
 		cout << "---";
 	}
 	cout << endl;
-	/*´òÓ¡Êı×é*/
+	/*æ‰“å°æ•°ç»„*/
 	for (int i = 0; i < row; i++)
 	{
 		cout << char('A' + i) << " |";
@@ -87,19 +87,19 @@ void print_matrix(int mode,const char *prompt, const int row, const int col, int
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÏÔÊ¾Êı×é(²»Í¬É«±êÊ¶)
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N], ´æ·ÅËæ»úÊıµÄ¾ØÕó
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄ¾ØÕó
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ˜¾ç¤ºæ•°ç»„(ä¸åŒè‰²æ ‡è¯†)
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N], å­˜æ”¾éšæœºæ•°çš„çŸ©é˜µ
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„çŸ©é˜µ
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void print_matrix_color(const char *prompt,const int row, const int col, int matrix[][N],int pos[][N])
 {
-	cout << prompt << "(²»Í¬É«±êÊ¶)£º" << endl;
-	/*ºáÀ¸*/
+	cout << prompt << "(ä¸åŒè‰²æ ‡è¯†)ï¼š" << endl;
+	/*æ¨ªæ */
 	cout << setw(2) << ' ';
 	cout << '|';
 	for (int i = 0; i < col; i++)
@@ -107,14 +107,14 @@ void print_matrix_color(const char *prompt,const int row, const int col, int mat
 		cout << setw(3) << i;
 	}
 	cout << endl;
-	/*·Ö½çÏß*/
+	/*åˆ†ç•Œçº¿*/
 	cout << "--+";
 	for (int i = 0; i < col; i++)
 	{
 		cout << "---";
 	}
 	cout << endl;
-	/*´òÓ¡Êı×é*/
+	/*æ‰“å°æ•°ç»„*/
 	for (int i = 0; i < row; i++)
 	{
 		cout << char('A' + i) << " |";
@@ -135,31 +135,31 @@ void print_matrix_color(const char *prompt,const int row, const int col, int mat
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÅĞ¶Ï¸ÃÎ»ÖÃÊÇ·ñÓĞÏàÁÚµÄÏàÍ¬Öµ
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			const int row_pos, Î»ÖÃĞĞ×ø±ê
-			const int col_pos, Î»ÖÃÁĞ×ø±ê
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-  ·µ »Ø Öµ£º1 ¸ÃÎ»ÖÃÓĞÏàÁÚµÄÏàÍ¬Öµ
-			0 ¸ÃÎ»ÖÃÎŞÏàÁÚµÄÏàÍ¬Öµ
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šåˆ¤æ–­è¯¥ä½ç½®æ˜¯å¦æœ‰ç›¸é‚»çš„ç›¸åŒå€¼
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			const int row_pos, ä½ç½®è¡Œåæ ‡
+			const int col_pos, ä½ç½®åˆ—åæ ‡
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+  è¿” å› å€¼ï¼š1 è¯¥ä½ç½®æœ‰ç›¸é‚»çš„ç›¸åŒå€¼
+			0 è¯¥ä½ç½®æ— ç›¸é‚»çš„ç›¸åŒå€¼
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 int is_adjacent_same(const int row, const int col, const int row_pos, const int col_pos, int matrix[][N])
 {
 	int val = matrix[row_pos][col_pos];
 
-	//ÉÏ
+	//ä¸Š
 	if (matrix[row_pos - 1][col_pos] == val && row_pos > 0)
 		return 1;
-	//ÏÂ
+	//ä¸‹
 	else if (matrix[row_pos + 1][col_pos] == val && row_pos < row - 1)
 		return 1;
-	//×ó
+	//å·¦
 	else if (matrix[row_pos][col_pos - 1] == val && col_pos > 0)
 		return 1;
-	//ÓÒ
+	//å³
 	else if (matrix[row_pos][col_pos + 1] == val && col_pos < col - 1)
 		return 1;
 	else
@@ -167,31 +167,31 @@ int is_adjacent_same(const int row, const int col, const int row_pos, const int 
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÕÒÓë¸Ã×ø±êÏàÁÚµÄËùÓĞÏàÍ¬Öµ£¨ÉÏÏÂ×óÓÒÖµÏàÍ¬£©(·Çµİ¹é·½Ê½)
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			const int row_pos, Î»ÖÃĞĞ×ø±ê
-			const int col_pos, Î»ÖÃÁĞ×ø±ê
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ‰¾ä¸è¯¥åæ ‡ç›¸é‚»çš„æ‰€æœ‰ç›¸åŒå€¼ï¼ˆä¸Šä¸‹å·¦å³å€¼ç›¸åŒï¼‰(éé€’å½’æ–¹å¼)
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			const int row_pos, ä½ç½®è¡Œåæ ‡
+			const int col_pos, ä½ç½®åˆ—åæ ‡
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void seek_same_val_nonrecursive(const int row, const int col,int row_pos, int col_pos,int matrix[][N], int pos[][N])
 {
-	int val = matrix[row_pos][col_pos];//¸Ã×ø±êµÄÖµ
+	int val = matrix[row_pos][col_pos];//è¯¥åæ ‡çš„å€¼
 	pos[row_pos][col_pos] = 1;
 
 	int r = 0;
-	int c = 0;//±È½ÏÎ»ÖÃ
+	int c = 0;//æ¯”è¾ƒä½ç½®
 
-	/*ÏÈ´Órow_posĞĞ¿ªÊ¼ÏòÉÏ¡¢ÏòÏÂÒ»ĞĞĞĞ²éÕÒ*/
-	/*Ã¿ĞĞ´Ócol_posÁĞ¿ªÊ¼Ïò×ó¡¢ÏòÓÒÒ»ÁĞÁĞ²éÕÒ£¬²éÕÒµ½µÄÏàÁÚÏàÍ¬ÖµposÖÃ1*/
+	/*å…ˆä»row_posè¡Œå¼€å§‹å‘ä¸Šã€å‘ä¸‹ä¸€è¡Œè¡ŒæŸ¥æ‰¾*/
+	/*æ¯è¡Œä»col_posåˆ—å¼€å§‹å‘å·¦ã€å‘å³ä¸€åˆ—åˆ—æŸ¥æ‰¾ï¼ŒæŸ¥æ‰¾åˆ°çš„ç›¸é‚»ç›¸åŒå€¼posç½®1*/
 
-	r = row_pos;//´Órow_posĞĞ¿ªÊ¼
+	r = row_pos;//ä»row_posè¡Œå¼€å§‹
 
-	c = col_pos;//´Ócol_posÁĞ¿ªÊ¼Ïò×ó
+	c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å·¦
 	c--;
 	while (c >= 0)
 	{
@@ -201,10 +201,10 @@ void seek_same_val_nonrecursive(const int row, const int col,int row_pos, int co
 			c--;
 		}
 		else
-			break;//¸ÃĞĞ¼ÌĞøÏò×óÎŞÏàÁÚµÄÏàÍ¬Öµ
+			break;//è¯¥è¡Œç»§ç»­å‘å·¦æ— ç›¸é‚»çš„ç›¸åŒå€¼
 	}
 
-	c = col_pos;//´Ócol_posÁĞ¿ªÊ¼ÏòÓÒ
+	c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å³
 	c++;
 	while (c < col)
 	{
@@ -214,45 +214,45 @@ void seek_same_val_nonrecursive(const int row, const int col,int row_pos, int co
 			c++;
 		}
 		else
-			break;//¸ÃĞĞ¼ÌĞøÏòÓÒÎŞÏàÁÚµÄÏàÍ¬Öµ
+			break;//è¯¥è¡Œç»§ç»­å‘å³æ— ç›¸é‚»çš„ç›¸åŒå€¼
 	}
 
-	r = row_pos - 1;//´Órow_posĞĞ¿ªÊ¼ÏòÉÏ
+	r = row_pos - 1;//ä»row_posè¡Œå¼€å§‹å‘ä¸Š
 	while (r >= 0)
 	{
 		c = col_pos;
-		if (matrix[r][c] == val && pos[r + 1][c] == 1)//ÖµÏàµÈÇÒÏÂ·½ÎªÏàÁÚÏàÍ¬Öµ
+		if (matrix[r][c] == val && pos[r + 1][c] == 1)//å€¼ç›¸ç­‰ä¸”ä¸‹æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 		{
 			pos[r][c] = 1;
 		}
 
-		c = col_pos;//´Ócol_posÁĞ¿ªÊ¼Ïò×ó
+		c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å·¦
 		c--;
 
 		while (c >= 0)
 		{
-			if (matrix[r][c] == val && (pos[r + 1][c] == 1 || pos[r][c + 1] == 1))//ÖµÏàµÈÇÒÏÂ·½ÎªÏàÁÚÏàÍ¬Öµ»òÓÒ·½ÎªÏàÁÚÏàÍ¬Öµ
+			if (matrix[r][c] == val && (pos[r + 1][c] == 1 || pos[r][c + 1] == 1))//å€¼ç›¸ç­‰ä¸”ä¸‹æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼æˆ–å³æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 			{
 				pos[r][c] = 1;
-				if (matrix[r + 1][c] == val && pos[r + 1][c] == 0)//ÈôÏÂ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r + 1][c] == val && pos[r + 1][c] == 0)//è‹¥ä¸‹æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r + 1][c] = 1;
-				if (matrix[r][c + 1] == val && pos[r][c + 1] == 0)//ÈôÓÒ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r][c + 1] == val && pos[r][c + 1] == 0)//è‹¥å³æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r][c + 1] = 1;
 			}
 			
 			c--;
 		}
 
-		c = col_pos;//´Ócol_posÁĞ¿ªÊ¼ÏòÓÒ
+		c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å³
 		c++;
 		while (c < col)
 		{
-			if (matrix[r][c] == val && (pos[r + 1][c] == 1 || pos[r][c - 1] == 1))//ÖµÏàµÈÇÒÏÂ·½ÎªÏàÁÚÏàÍ¬Öµ»ò×ó·½ÎªÏàÁÚÏàÍ¬Öµ
+			if (matrix[r][c] == val && (pos[r + 1][c] == 1 || pos[r][c - 1] == 1))//å€¼ç›¸ç­‰ä¸”ä¸‹æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼æˆ–å·¦æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 			{
 				pos[r][c] = 1;
-				if (matrix[r + 1][c] == val && pos[r + 1][c] == 0)//ÈôÏÂ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r + 1][c] == val && pos[r + 1][c] == 0)//è‹¥ä¸‹æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r + 1][c] = 1;
-				if (matrix[r][c - 1] == val && pos[r][c - 1] == 0)//Èô×ó·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r][c - 1] == val && pos[r][c - 1] == 0)//è‹¥å·¦æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r][c - 1] = 1;
 			}
 			c++;
@@ -261,39 +261,39 @@ void seek_same_val_nonrecursive(const int row, const int col,int row_pos, int co
 		r--;
 	}
 
-	r = row_pos + 1;//´Órow_posĞĞ¿ªÊ¼ÏòÏÂ
+	r = row_pos + 1;//ä»row_posè¡Œå¼€å§‹å‘ä¸‹
 	while (r < row)
 	{
 		c = col_pos;
-		if (matrix[r][c] == val && pos[r - 1][c] == 1)//ÖµÏàµÈÇÒÏÂ·½ÎªÏàÁÚÏàÍ¬Öµ
+		if (matrix[r][c] == val && pos[r - 1][c] == 1)//å€¼ç›¸ç­‰ä¸”ä¸‹æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 		{
 			pos[r][c] = 1;
 		}
-		c = col_pos;//´Ócol_posÁĞ¿ªÊ¼Ïò×ó
+		c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å·¦
 		c--;
 		while (c >= 0)
 		{
-			if (matrix[r][c] == val && (pos[r - 1][c] == 1 || pos[r][c + 1] == 1))//ÖµÏàµÈÇÒÉÏ·½ÎªÏàÁÚÏàÍ¬Öµ»òÓÒ·½ÎªÏàÁÚÏàÍ¬Öµ
+			if (matrix[r][c] == val && (pos[r - 1][c] == 1 || pos[r][c + 1] == 1))//å€¼ç›¸ç­‰ä¸”ä¸Šæ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼æˆ–å³æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 			{
 				pos[r][c] = 1;
-				if (matrix[r - 1][c] == val && pos[r - 1][c] == 0)//ÈôÉÏ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r - 1][c] == val && pos[r - 1][c] == 0)//è‹¥ä¸Šæ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r - 1][c] = 1;
-				if (matrix[r][c + 1] == val && pos[r][c + 1] == 0)//ÈôÓÒ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r][c + 1] == val && pos[r][c + 1] == 0)//è‹¥å³æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r][c + 1] = 1;
 			}
 			c--;
 		}
 
-		c = col_pos;//´Ócol_posÁĞ¿ªÊ¼ÏòÓÒ
+		c = col_pos;//ä»col_posåˆ—å¼€å§‹å‘å³
 		c++;
 		while (c < col)
 		{
-			if (matrix[r][c] == val && (pos[r - 1][c] == 1 || pos[r][c - 1] == 1))//ÖµÏàµÈÇÒÉÏ·½ÎªÏàÁÚÏàÍ¬Öµ»ò×ó·½ÎªÏàÁÚÏàÍ¬Öµ
+			if (matrix[r][c] == val && (pos[r - 1][c] == 1 || pos[r][c - 1] == 1))//å€¼ç›¸ç­‰ä¸”ä¸Šæ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼æˆ–å·¦æ–¹ä¸ºç›¸é‚»ç›¸åŒå€¼
 			{
 				pos[r][c] = 1;
-				if (matrix[r - 1][c] == val && pos[r - 1][c] == 0)//ÈôÉÏ·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r - 1][c] == val && pos[r - 1][c] == 0)//è‹¥ä¸Šæ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r - 1][c] = 1;
-				if (matrix[r][c - 1] == val && pos[r][c - 1] == 0)//Èô×ó·½Î´ÓëËùÔÚĞĞµÄcol_posÎ»ÖÃÏàÁ¬£¬µ«Ò²ÎªÏàÍ¬Öµ
+				if (matrix[r][c - 1] == val && pos[r][c - 1] == 0)//è‹¥å·¦æ–¹æœªä¸æ‰€åœ¨è¡Œçš„col_posä½ç½®ç›¸è¿ï¼Œä½†ä¹Ÿä¸ºç›¸åŒå€¼
 					pos[r][c - 1] = 1;
 			}
 			c++;
@@ -304,56 +304,56 @@ void seek_same_val_nonrecursive(const int row, const int col,int row_pos, int co
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÕÒÓë¸Ã×ø±êÏàÁÚµÄËùÓĞÏàÍ¬Öµ£¨ÉÏÏÂ×óÓÒÖµÏàÍ¬£©(µİ¹é·½Ê½)
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int row_pos, Î»ÖÃĞĞ×ø±ê
-			int col_pos, Î»ÖÃÁĞ×ø±ê
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ‰¾ä¸è¯¥åæ ‡ç›¸é‚»çš„æ‰€æœ‰ç›¸åŒå€¼ï¼ˆä¸Šä¸‹å·¦å³å€¼ç›¸åŒï¼‰(é€’å½’æ–¹å¼)
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int row_pos, ä½ç½®è¡Œåæ ‡
+			int col_pos, ä½ç½®åˆ—åæ ‡
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void seek_same_val_recursive(const int row, const int col, int row_pos, int col_pos, int matrix[][N], int pos[][N])
 {
-	//´Ó£¨row_pos,col_pos£©¿ªÊ¼£¬ÕÒÉÏÏÂ×óÓÒÊÇ·ñÓĞÖµÏàÍ¬µÄ£¬
-	//ÈôÓĞ£¬ÔòposÖÃ1£¬¼ÌĞø´ÓÏàÁÚÎ»ÖÃÕÒ£¬
-	//ÈôÄ³Î»ÖÃµÄposÒÑÖÃ1£¬ËµÃ÷¸ÃÎ»ÖÃÒÑ±»²éÕÒ¹ı£¬Ôò²»¼ÌĞø²éÕÒ
+	//ä»ï¼ˆrow_pos,col_posï¼‰å¼€å§‹ï¼Œæ‰¾ä¸Šä¸‹å·¦å³æ˜¯å¦æœ‰å€¼ç›¸åŒçš„ï¼Œ
+	//è‹¥æœ‰ï¼Œåˆ™posç½®1ï¼Œç»§ç»­ä»ç›¸é‚»ä½ç½®æ‰¾ï¼Œ
+	//è‹¥æŸä½ç½®çš„poså·²ç½®1ï¼Œè¯´æ˜è¯¥ä½ç½®å·²è¢«æŸ¥æ‰¾è¿‡ï¼Œåˆ™ä¸ç»§ç»­æŸ¥æ‰¾
 	if (row_pos >= 0 && row_pos < row && col_pos >= 0 && col_pos < col && pos[row_pos][col_pos] == 0)
 	{
-		int val = matrix[row_pos][col_pos];//¸Ã×ø±êµÄÖµ
+		int val = matrix[row_pos][col_pos];//è¯¥åæ ‡çš„å€¼
 		pos[row_pos][col_pos] = 1;
 
-		//ÉÏ
+		//ä¸Š
 		if (matrix[row_pos - 1][col_pos] == val)
 			seek_same_val_recursive(row, col, row_pos - 1, col_pos, matrix, pos);
-		//ÏÂ
+		//ä¸‹
 		if (matrix[row_pos + 1][col_pos] == val)
 			seek_same_val_recursive(row, col, row_pos + 1, col_pos, matrix, pos);
-		//×ó
+		//å·¦
 		if (matrix[row_pos][col_pos - 1] == val)
 			seek_same_val_recursive(row, col, row_pos, col_pos - 1, matrix, pos);
-		//ÓÒ
+		//å³
 		if (matrix[row_pos][col_pos + 1] == val)
 			seek_same_val_recursive(row, col, row_pos, col_pos + 1, matrix, pos);
 	}
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£º°ÑÏàÁÚµÄÏàÍ¬ÖµºÏ²¢
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			const int row_pos, Î»ÖÃĞĞ×ø±ê
-			const int col_pos, Î»ÖÃÁĞ×ø±ê
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-			int &point, ×Ü·Ö
-			int goal, Ä¿±ê·ÖÊı
-			int &max, Ä¿Ç°Êı×éÖĞµÄ×î´óÖµ
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæŠŠç›¸é‚»çš„ç›¸åŒå€¼åˆå¹¶
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			const int row_pos, ä½ç½®è¡Œåæ ‡
+			const int col_pos, ä½ç½®åˆ—åæ ‡
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+			int &point, æ€»åˆ†
+			int goal, ç›®æ ‡åˆ†æ•°
+			int &max, ç›®å‰æ•°ç»„ä¸­çš„æœ€å¤§å€¼
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void merge(const int row,const int col,const int row_pos, const int col_pos, int matrix[][N], int pos[][N],int &point,int goal,int &max,int mode)
 {
@@ -372,7 +372,7 @@ void merge(const int row,const int col,const int row_pos, const int col_pos, int
 			if (pos[i][j])
 			{
 				if (i == row_pos && j == col_pos)
-					matrix[i][j]++;//ºÏ²¢ºóÖµ+1
+					matrix[i][j]++;//åˆå¹¶åå€¼+1
 				else
 				{
 					matrix[i][j] = 0;
@@ -385,38 +385,38 @@ void merge(const int row,const int col,const int row_pos, const int col_pos, int
 
 	if (mode == 0)
 	{
-		print_matrix_color("ÏàÍ¬Öµ¹é²¢ºóµÄÊı×é", row, col, matrix, pos);
-		cout << "±¾´ÎµÃ·Ö£º" << add_point << ' ';
-		cout << "×ÜµÃ·Ö£º" << point << ' ';
-		cout << "ºÏ³ÉÄ¿±ê£º" << goal << endl;
+		print_matrix_color("ç›¸åŒå€¼å½’å¹¶åçš„æ•°ç»„", row, col, matrix, pos);
+		cout << "æœ¬æ¬¡å¾—åˆ†ï¼š" << add_point << ' ';
+		cout << "æ€»å¾—åˆ†ï¼š" << point << ' ';
+		cout << "åˆæˆç›®æ ‡ï¼š" << goal << endl;
 	}
 	else if (mode == 1)
 	{
 		int x, y;
 		cct_getxy(x, y);
 		cct_gotoxy(0, 0);
-		cout << "±¾´ÎµÃ·Ö£º" << add_point << ' ';
-		cout << "×ÜµÃ·Ö£º" << point << ' ';
-		cout << "ºÏ³ÉÄ¿±ê£º" << goal << endl;
+		cout << "æœ¬æ¬¡å¾—åˆ†ï¼š" << add_point << ' ';
+		cout << "æ€»å¾—åˆ†ï¼š" << point << ' ';
+		cout << "åˆæˆç›®æ ‡ï¼š" << goal << endl;
 		cct_gotoxy(x, y);
 	}
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÊı×éÏÂÂä³ı0
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			const int row_pos, Î»ÖÃĞĞ×ø±ê
-			const int col_pos, Î»ÖÃÁĞ×ø±ê
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ•°ç»„ä¸‹è½é™¤0
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			const int row_pos, ä½ç½®è¡Œåæ ‡
+			const int col_pos, ä½ç½®åˆ—åæ ‡
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
 			int mode,
-				0£º0ÏòÉÏÒÆ¶¯£¬´òÓ¡³ı0ºóÊı×é
-				1£º½«ºÏ²¢Î»ÖÃĞÅÏ¢ÖÃÁã
-				2£º0ÏòÉÏÒÆ¶¯£¬²»´òÓ¡Êı×é
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+				0ï¼š0å‘ä¸Šç§»åŠ¨ï¼Œæ‰“å°é™¤0åæ•°ç»„
+				1ï¼šå°†åˆå¹¶ä½ç½®ä¿¡æ¯ç½®é›¶
+				2ï¼š0å‘ä¸Šç§»åŠ¨ï¼Œä¸æ‰“å°æ•°ç»„
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void drop_down(const int row, const int col, const int row_pos, const int col_pos, int matrix[][N], int pos[][N], int mode)
 {
@@ -442,11 +442,11 @@ void drop_down(const int row, const int col, const int row_pos, const int col_po
 			}
 		}
 
-		print_matrix_color("³ı0ºóµÄÊı×é", row, col, matrix, pos);
+		print_matrix_color("é™¤0åçš„æ•°ç»„", row, col, matrix, pos);
 	}
 	else if (mode == 1)
 	{
-		pos[row_pos][col_pos] = 0;//ÏÈ²»¸Ä±äÊı×éÀïµÄĞÅÏ¢
+		pos[row_pos][col_pos] = 0;//å…ˆä¸æ”¹å˜æ•°ç»„é‡Œçš„ä¿¡æ¯
 	}
 	else if (mode == 2)
 	{
@@ -473,20 +473,20 @@ void drop_down(const int row, const int col, const int row_pos, const int col_po
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºĞÂÖµÌî³ä
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-			const int max, Ä¿Ç°Êı×éÖĞµÄ×î´óÖµ
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šæ–°å€¼å¡«å……
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+			const int max, ç›®å‰æ•°ç»„ä¸­çš„æœ€å¤§å€¼
 
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  è¿” å› å€¼ï¼š
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 void fill_new_val(const int row, const int col, int matrix[][N], int pos[][N],const int max,int mode)
 {
-	int count = 0;//¼ÇÂ¼posÖĞÖÃ1Î»ÖÃµÄ¸öÊı£¬¼´Êı×éÖĞÎª0¡¢ĞèÒªÌî³äĞÂÖµµÄÎ»ÖÃ¸öÊı
+	int count = 0;//è®°å½•posä¸­ç½®1ä½ç½®çš„ä¸ªæ•°ï¼Œå³æ•°ç»„ä¸­ä¸º0ã€éœ€è¦å¡«å……æ–°å€¼çš„ä½ç½®ä¸ªæ•°
 	for (int i = 0; i < row; i++)
 	{
 		for (int j = 0; j < col; j++)
@@ -606,20 +606,20 @@ void fill_new_val(const int row, const int col, int matrix[][N], int pos[][N],co
 	}
 	if (mode == 0)
 	{
-		print_matrix_color("ĞÂÖµÌî³äºóµÄÊı×é", row, col, matrix, pos);
+		print_matrix_color("æ–°å€¼å¡«å……åçš„æ•°ç»„", row, col, matrix, pos);
 	}
 }
 
 /***************************************************************************
-  º¯ÊıÃû³Æ£º
-  ¹¦    ÄÜ£ºÅĞ¶ÏÕû¸öÊı×éÊÇ·ñ´æÔÚÏàÁÚÎ»ÖÃÏàµÈ
-  ÊäÈë²ÎÊı£ºconst int row, ĞĞÊı
-			const int col, ÁĞÊı
-			int matrix[][N]£¬ ´æ·ÅÊıÖµµÄÊı×é
-			int pos[][N], ´æ·ÅÎ»ÖÃĞÅÏ¢µÄÊı×é
-  ·µ »Ø Öµ£º1 ¸ÃÊı×éÓĞÏàÁÚµÄÏàÍ¬Öµ
-			0 ¸ÃÊı×éÎŞÏàÁÚµÄÏàÍ¬Öµ
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼šåˆ¤æ–­æ•´ä¸ªæ•°ç»„æ˜¯å¦å­˜åœ¨ç›¸é‚»ä½ç½®ç›¸ç­‰
+  è¾“å…¥å‚æ•°ï¼šconst int row, è¡Œæ•°
+			const int col, åˆ—æ•°
+			int matrix[][N]ï¼Œ å­˜æ”¾æ•°å€¼çš„æ•°ç»„
+			int pos[][N], å­˜æ”¾ä½ç½®ä¿¡æ¯çš„æ•°ç»„
+  è¿” å› å€¼ï¼š1 è¯¥æ•°ç»„æœ‰ç›¸é‚»çš„ç›¸åŒå€¼
+			0 è¯¥æ•°ç»„æ— ç›¸é‚»çš„ç›¸åŒå€¼
+  è¯´    æ˜ï¼š
 ***************************************************************************/
 int is_array_adjacent_same(const int row, const int col, int matrix[][N])
 {
@@ -636,4 +636,5 @@ int is_array_adjacent_same(const int row, const int col, int matrix[][N])
 
 	return 0;
 }
+
 
