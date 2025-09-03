@@ -1,4 +1,3 @@
-/* µçÐÅ 1850917 ÁºÊ«Ñþ */
 #include <iostream>
 #include <iomanip>
 #include <conio.h>
@@ -8,29 +7,29 @@ using namespace std;
 
 /* ----------------------------------------------------------------------------------
 
-     ±¾ÎÄ¼þ¹¦ÄÜ£º
-	1¡¢·Åmainº¯Êý
-	2¡¢³õÊ¼»¯ÆÁÄ»
-	3¡¢µ÷ÓÃ²Ëµ¥º¯Êý£¨hanoi_menu.cppÖÐ£©²¢·µ»ØÑ¡Ïî
-	4¡¢¸ù¾ÝÑ¡Ïîµ÷ÓÃ²Ëµ¥¸÷Ïî¶ÔÓ¦µÄÖ´ÐÐº¯Êý£¨hanoi_multiple_solutions.cppÖÐ£©
+     æœ¬æ–‡ä»¶åŠŸèƒ½ï¼š
+	1ã€æ”¾mainå‡½æ•°
+	2ã€åˆå§‹åŒ–å±å¹•
+	3ã€è°ƒç”¨èœå•å‡½æ•°ï¼ˆhanoi_menu.cppä¸­ï¼‰å¹¶è¿”å›žé€‰é¡¹
+	4ã€æ ¹æ®é€‰é¡¹è°ƒç”¨èœå•å„é¡¹å¯¹åº”çš„æ‰§è¡Œå‡½æ•°ï¼ˆhanoi_multiple_solutions.cppä¸­ï¼‰
 
-     ±¾ÎÄ¼þÒªÇó£º
-	1¡¢²»ÔÊÐí¶¨ÒåÈ«¾Ö±äÁ¿£¨º¬Íâ²¿È«¾ÖºÍ¾²Ì¬È«¾Ö£¬const¼°#define²»ÔÚÏÞÖÆ·¶Î§ÄÚ£©
-	2¡¢¾²Ì¬¾Ö²¿±äÁ¿µÄÊýÁ¿²»ÏÞÖÆ£¬µ«Ê¹ÓÃ×¼ÔòÒ²ÊÇ£ºÉÙÓÃ¡¢É÷ÓÃ¡¢ÄÜ²»ÓÃ¾¡Á¿²»ÓÃ
-	3¡¢°´Ðè¼ÓÈëÏµÍ³Í·ÎÄ¼þ¡¢×Ô¶¨ÒåÍ·ÎÄ¼þ¡¢ÃüÃû¿Õ¼äµÈ
+     æœ¬æ–‡ä»¶è¦æ±‚ï¼š
+	1ã€ä¸å…è®¸å®šä¹‰å…¨å±€å˜é‡ï¼ˆå«å¤–éƒ¨å…¨å±€å’Œé™æ€å…¨å±€ï¼ŒconståŠ#defineä¸åœ¨é™åˆ¶èŒƒå›´å†…ï¼‰
+	2ã€é™æ€å±€éƒ¨å˜é‡çš„æ•°é‡ä¸é™åˆ¶ï¼Œä½†ä½¿ç”¨å‡†åˆ™ä¹Ÿæ˜¯ï¼šå°‘ç”¨ã€æ…Žç”¨ã€èƒ½ä¸ç”¨å°½é‡ä¸ç”¨
+	3ã€æŒ‰éœ€åŠ å…¥ç³»ç»Ÿå¤´æ–‡ä»¶ã€è‡ªå®šä¹‰å¤´æ–‡ä»¶ã€å‘½åç©ºé—´ç­‰
 
    ----------------------------------------------------------------------------------- */
 
 /***************************************************************************
-  º¯ÊýÃû³Æ£º
-  ¹¦    ÄÜ£º
-  ÊäÈë²ÎÊý£º
-  ·µ »Ø Öµ£º
-  Ëµ    Ã÷£º
+  å‡½æ•°åç§°ï¼š
+  åŠŸ    èƒ½ï¼š
+  è¾“å…¥å‚æ•°ï¼š
+  è¿” å›ž å€¼ï¼š
+  è¯´    æ˜Žï¼š
 ***************************************************************************/
 int main()
 {
-	/* demoÖÐÊ×ÏÈÖ´ÐÐ´Ë¾ä£¬½«cmd´°¿ÚÉèÖÃÎª40ÐÐx120ÁÐ£¨»º³åÇø¿í¶È120ÁÐ£¬ÐÐÊý9000ÐÐ£¬¼´cmd´°¿ÚÓÒ²à´øÓÐ´¹Ö±¹ö¶¯¸Ë£©*/
+	/* demoä¸­é¦–å…ˆæ‰§è¡Œæ­¤å¥ï¼Œå°†cmdçª—å£è®¾ç½®ä¸º40è¡Œx120åˆ—ï¼ˆç¼“å†²åŒºå®½åº¦120åˆ—ï¼Œè¡Œæ•°9000è¡Œï¼Œå³cmdçª—å£å³ä¾§å¸¦æœ‰åž‚ç›´æ»šåŠ¨æ†ï¼‰*/
 	cct_setconsoleborder(120, 40, 120, 9000);
 
 	char mode;
@@ -44,100 +43,100 @@ int main()
 	{
 		//cct_cls();
 
-		/*²Ëµ¥µÄÏÔÊ¾ÓëÑ¡Ôñ*/
+		/*èœå•çš„æ˜¾ç¤ºä¸Žé€‰æ‹©*/
 		mode = printAndselctMenu();
 
-		/*ÈôÑ¡ÔñÍË³ö£¬Ö±½ÓÍË³ö*/
+		/*è‹¥é€‰æ‹©é€€å‡ºï¼Œç›´æŽ¥é€€å‡º*/
 		if (mode == '0')
 			break;
 
 		switch (mode)
 		{
-			case '1':// 1.»ù±¾½â
+			case '1':// 1.åŸºæœ¬è§£
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				hanoi(layer, startColumn, transitColumn, targetColumn, '1');
 
-				cout <<endl<< "°´»Ø³µ¼ü¼ÌÐø...";
+				cout <<endl<< "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '2'://2.»ù±¾½â£¨²½Êý¼ÇÂ¼£©
+			case '2'://2.åŸºæœ¬è§£ï¼ˆæ­¥æ•°è®°å½•ï¼‰
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				hanoi(layer, startColumn, transitColumn, targetColumn, '2');
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '3'://3.ÄÚ²¿Êý×éÏÔÊ¾£¨ºáÏò£©
+			case '3'://3.å†…éƒ¨æ•°ç»„æ˜¾ç¤ºï¼ˆæ¨ªå‘ï¼‰
 				
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
 				hanoi(layer, startColumn, transitColumn, targetColumn, '3', layer);
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '4'://4.ÄÚ²¿Êý×éÏÔÊ¾£¨×ÝÏò+ºáÏò£©
+			case '4'://4.å†…éƒ¨æ•°ç»„æ˜¾ç¤ºï¼ˆçºµå‘+æ¨ªå‘ï¼‰
 				speed=inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
 				cct_cls();
 
-				cout << "´Ó " << startColumn << " ÒÆ¶¯µ½ " << targetColumn << "£¬¹²" << layer << " ²ã£¬ÑÓÊ±ÉèÖÃÎª " << speed;
+				cout << "ä»Ž " << startColumn << " ç§»åŠ¨åˆ° " << targetColumn << "ï¼Œå…±" << layer << " å±‚ï¼Œå»¶æ—¶è®¾ç½®ä¸º " << speed;
 
 				cct_gotoxy(0, 17);
-				cout << "³õÊ¼:" << setw(15) << ' ';
+				cout << "åˆå§‹:" << setw(15) << ' ';
 				showColumn_horizontal();
 				showColumn_vertical();
 
 				hanoi(layer, startColumn, transitColumn, targetColumn, '4', layer, speed);
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '5'://5.Í¼ÐÎ½â-Ô¤±¸-»­Èý¸öÔ²Öù
-				/*ÇåÆÁ*/
+			case '5'://5.å›¾å½¢è§£-é¢„å¤‡-ç”»ä¸‰ä¸ªåœ†æŸ±
+				/*æ¸…å±*/
 				cct_cls();
 
 				drawColumn();
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '6'://6.Í¼ÐÎ½â-Ô¤±¸-ÔÚÆðÊ¼ÖùÉÏ»­n¸öÅÌ×Ó
+			case '6'://6.å›¾å½¢è§£-é¢„å¤‡-åœ¨èµ·å§‹æŸ±ä¸Šç”»nä¸ªç›˜å­
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
-				cct_cls();//ÇåÆÁ
+				cct_cls();//æ¸…å±
 
 				drawColumn();
 				drawPlate();
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­";
 				break;
 
 
-			case '7'://7.Í¼ÐÎ½â - Ô¤±¸ - µÚÒ»´ÎÒÆ¶¯
+			case '7'://7.å›¾å½¢è§£ - é¢„å¤‡ - ç¬¬ä¸€æ¬¡ç§»åŠ¨
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
-				cct_cls();//ÇåÆÁ
+				cct_cls();//æ¸…å±
 
-				cout << "´Ó " << startColumn << " ÒÆ¶¯µ½ " << targetColumn << "£¬¹²" << layer << " ²ã";
+				cout << "ä»Ž " << startColumn << " ç§»åŠ¨åˆ° " << targetColumn << "ï¼Œå…±" << layer << " å±‚";
 
 				drawColumn();
 				drawPlate();
@@ -145,22 +144,22 @@ int main()
 				hanoi(layer, startColumn, transitColumn, targetColumn, '7', layer);
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '8'://8.Í¼ÐÎ½â-×Ô¶¯ÒÆ¶¯°æ±¾
+			case '8'://8.å›¾å½¢è§£-è‡ªåŠ¨ç§»åŠ¨ç‰ˆæœ¬
 				speed = inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
-				cct_cls();//ÇåÆÁ
+				cct_cls();//æ¸…å±
 
-				cout << "´Ó " << startColumn << " ÒÆ¶¯µ½ " << targetColumn << "£¬¹²" << layer << " ²ã£¬ÑÓÊ±ÉèÖÃÎª " << speed;
+				cout << "ä»Ž " << startColumn << " ç§»åŠ¨åˆ° " << targetColumn << "ï¼Œå…±" << layer << " å±‚ï¼Œå»¶æ—¶è®¾ç½®ä¸º " << speed;
 
 				cct_gotoxy(0, HORIZONTAL_Y);
-				cout << "³õÊ¼:" << setw(15) << ' ';
+				cout << "åˆå§‹:" << setw(15) << ' ';
 				showColumn_horizontal();
 
 				showColumn_vertical(VERTICAL_X, VERTICAL_Y);
@@ -171,24 +170,24 @@ int main()
 				hanoi(layer, startColumn, transitColumn, targetColumn, '8', layer, speed);
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 
 
-			case '9'://9.Í¼ÐÎ½â-ÓÎÏ·°æ
+			case '9'://9.å›¾å½¢è§£-æ¸¸æˆç‰ˆ
 				inputBaseInfo(mode, &layer, &startColumn, &transitColumn, &targetColumn);
 				initStartColumn(startColumn, layer);
 
-				cct_cls();//ÇåÆÁ
+				cct_cls();//æ¸…å±
 
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				/*³õÊ¼ÏÔÊ¾*/
-				cout << "´Ó " << startColumn << " ÒÆ¶¯µ½ " << targetColumn << "£¬¹²" << layer << " ²ã";
+				/*åˆå§‹æ˜¾ç¤º*/
+				cout << "ä»Ž " << startColumn << " ç§»åŠ¨åˆ° " << targetColumn << "ï¼Œå…±" << layer << " å±‚";
 				cct_gotoxy(0, HORIZONTAL_Y);
-				cout << "³õÊ¼:" << setw(15) << ' ';
+				cout << "åˆå§‹:" << setw(15) << ' ';
 
 				showColumn_horizontal();
 
@@ -200,16 +199,16 @@ int main()
 				game(layer, startColumn, targetColumn);
 
 				cct_gotoxy(0, END_Y);
-				cct_setcursor(CURSOR_VISIBLE_NORMAL);//ÉèÖÃ¹â±êÎªÄ¬ÈÏ
+				cct_setcursor(CURSOR_VISIBLE_NORMAL);//è®¾ç½®å…‰æ ‡ä¸ºé»˜è®¤
 
-				cout << endl << "°´»Ø³µ¼ü¼ÌÐø...";
+				cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­...";
 				break;
 		}
 		
 
-		/*ÖØÖÃ*/
-		resetSTEP();//ÖØÖÃ¼ÆÊý
-		resetColumn();//ÖØÖÃÊý×é
+		/*é‡ç½®*/
+		resetSTEP();//é‡ç½®è®¡æ•°
+		resetColumn();//é‡ç½®æ•°ç»„
 
 		while (_getch() != '\r')
 			;
@@ -222,3 +221,4 @@ int main()
 
 	return 0;
 }
+
